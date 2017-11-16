@@ -27,9 +27,6 @@ module.exports.createElement = (options, file, path, type = '') => {
   }
 
   const from = resolve(tool, ...path, file.name);
-  console.log(name);
-  console.log(file.path);
-  console.log(file.name);
   let to = resolve(name, ...file.path, file.name === 'gitignore'
     ?
     `.${ file.name }`
@@ -66,7 +63,6 @@ module.exports.createElement = (options, file, path, type = '') => {
     }
     catch (error) {}
   } else {
-    console.log(file.name);
     fs.createReadStream(from).pipe(fs.createWriteStream(to));
   }
 };
