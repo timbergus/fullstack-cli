@@ -1,0 +1,98 @@
+[
+  {
+    "name": "auth.js",
+    "path": ["src"],
+    "template": false,
+    "dependency": false
+  },
+  {
+    "name": "graphql.js",
+    "path": ["src", "handlers"],
+    "template": false,
+    "dependency": "graphql"
+  },
+  {
+    "name": "user-handlers.js",
+    "path": ["src", "handlers"],
+    "template": false,
+    "dependency": "graphql"
+  },
+  {
+    "name": "headers.js",
+    "path": ["src", "utils"],
+    "template": false,
+    "dependency": false
+  },
+  {
+    "name": "headers.test.js",
+    "path": ["src", "utils"],
+    "template": false,
+    "dependency": false
+  },
+  {
+    "name": "index.js",
+    "path": ["src"],
+    "template": true,
+    "dependency": false
+  },
+  {
+    "name": "models.js",
+    "path": ["src", "ddbb"],
+    "template": false,
+    "dependency": "mongodb"
+  },
+  {
+    "name": "mongodb.js",
+    "path": ["src", "ddbb"],
+    "template": false,
+    "dependency": "mongodb"
+  },
+  {
+    "name": "mongodb.json",
+    "path": ["src", "config"],
+    "template": false,
+    "dependency": "mongodb"
+  },
+  {
+    "name": "mysql.js",
+    "path": ["src", "ddbb"],
+    "template": false,
+    "dependency": "mysql"
+  },
+  {
+    "name": "mysql.json",
+    "path": ["src", "config"],
+    "template": false,
+    "dependency": "mysql"
+  },
+  {
+    "name": "postgresql.js",
+    "path": ["src", "ddbb"],
+    "template": false,
+    "dependency": "postgresql"
+  },
+  {
+    "name": "postgresql.json",
+    "path": ["src", "config"],
+    "template": false,
+    "dependency": "postgresql"
+  },
+  {
+    "name": "routes.js",
+    "path": ["src"],
+    "template": true,
+    "dependency": false
+  },
+  {
+    "name": "sockets.js",
+    "path": ["src"],
+    "template": false,
+    "dependency": "websockets"
+  },
+  {
+    "name": "token.js",
+    "path": ["src", "handlers"],
+    "template": false,
+    "dependency": false
+  }
+]

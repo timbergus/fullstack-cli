@@ -1,0 +1,9 @@
+{
+  "user": "",
+  "password": "",
+  "host": "localhost",
+  "port": "6543",
+  "database": "test",
+  "schema": "",
+  "table": ""
+}

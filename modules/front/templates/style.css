@@ -1,0 +1,34 @@
+* :focus {
+  outline: 0;
+}
+
+.home-button + .home-button {
+  margin-left: 10px;
+}
+
+h1 {
+  color: rgba(119, 158, 203, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.subtitle {
+  animation: fadeIn 500ms infinite alternate;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a + a {
+  margin-left: 10px;
+}
+
+.active {
+  color: cadetblue;
+}

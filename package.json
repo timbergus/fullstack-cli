@@ -1,0 +1,25 @@
+{
+  "name": "fullstack-cli",
+  "version": "0.0.1",
+  "description": "Fullstack CLI to create and manage new full stack projects.",
+  "main": "index.js",
+  "author": "Gustavo Muñoz <timbergus@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timbergus/fullstack-cli.git"
+  },
+  "bin": {
+    "fsc": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "2.3.0",
+    "inquirer": "4.0.0",
+    "mustache": "2.3.0",
+    "uppercamelcase": "3.0.0"
+  }
+}

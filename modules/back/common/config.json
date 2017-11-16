@@ -1,0 +1,32 @@
+[
+  {
+    "name": ".editorconfig",
+    "path": [],
+    "template": false
+  },
+  {
+    "name": ".eslintignore",
+    "path": [],
+    "template": false
+  },
+  {
+    "name": ".eslintrc.js",
+    "path": [],
+    "template": false
+  },
+  {
+    "name": "gitignore",
+    "path": [],
+    "template": false
+  },
+  {
+    "name": "package.json",
+    "path": [],
+    "template": true
+  },
+  {
+    "name": "README.md",
+    "path": [],
+    "template": true
+  }
+]

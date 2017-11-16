@@ -1,0 +1,76 @@
+{
+  "name": "{{ name }}",
+  "version": "{{ version }}",
+  "description": "{{ description }}",
+  "main": "src/app/index.js",
+  "author": "{{{ author }}}",
+  "license": "{{ license }}",
+  "private": {{ private }},
+  "scripts": {
+    "start": "webpack-dev-server --env.dev",
+    "build": "webpack -p --env.prod",
+    "build:output": "webpack -p --env.prod --profile --json >> stats.json",
+    "docs": "esdoc -c esdoc.json",
+    "lint": "eslint -c .eslintrc.js -f checkstyle src/app/**/* > checkstyle.xml",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "prop-types": "15.6.0",
+    {{# redux }}
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0",
+    "react-redux": "5.0.6",
+    {{/ redux }}
+    {{# routes}}
+    "react-router-dom": "4.2.2",
+    {{/ routes}}
+    {{# material-ui }}
+    "material-ui": "0.19.4",
+    {{/ material-ui }}
+    {{# websockets }}
+    "socket.io-client": "2.0.3",
+    {{/ websockets }}
+    "classnames": "2.2.5",
+    "moment": "2.19.1",
+    "numeral": "2.0.6",
+    "superagent": "3.6.3"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.1",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "clean-webpack-plugin": "0.1.17",
+    "copy-webpack-plugin": "4.1.1",
+    "css-loader": "0.28.7",
+    "esdoc": "1.0.3",
+    "eslint": "4.9.0",
+    "eslint-plugin-react": "7.4.0",
+    "extract-text-webpack-plugin": "3.0.1",
+    "file-loader": "1.1.5",
+    "glob": "7.1.2",
+    "html-webpack-plugin": "2.30.1",
+    "jest": "21.2.1",
+    "json-loader": "0.5.7",
+    "node-sass": "4.5.3",
+    "postcss-cssnext": "3.0.2",
+    "postcss-loader": "2.0.8",
+    "precss": "2.0.0",
+    "purify-css": "1.2.5",
+    "purifycss-webpack": "0.7.0",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.0",
+    "system-bell-webpack-plugin": "1.0.0",
+    "url-loader": "0.6.2",
+    "webpack": "3.7.1",
+    "webpack-dev-server": "2.9.2"
+  },
+  "jest": {
+    "testRegex": "/*.test.js$",
+    "collectCoverage": true
+  }
+}
