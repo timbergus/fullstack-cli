@@ -2,31 +2,37 @@
   {
     "name": ".editorconfig",
     "path": [],
-    "template": false
+    "template": false,
+    "dependency": ""
   },
   {
     "name": ".eslintignore",
     "path": [],
-    "template": false
+    "template": false,
+    "dependency": ""
   },
   {
     "name": ".eslintrc.js",
     "path": [],
-    "template": false
+    "template": false,
+    "dependency": ""
   },
   {
     "name": "gitignore",
     "path": [],
-    "template": false
+    "template": false,
+    "dependency": ""
   },
   {
     "name": "package.json",
     "path": [],
-    "template": true
+    "template": true,
+    "dependency": ""
   },
   {
     "name": "README.md",
     "path": [],
-    "template": true
+    "template": true,
+    "dependency": ""
   }
 ]

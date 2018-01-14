@@ -1,4 +1,4 @@
-const GET_CONTENT = 'react-redux/content/GET_CONTENT';
+const GET_CONTENT = '{{ name }}/content/GET_CONTENT';
 
 export function getContent () {
   return dispatch => {

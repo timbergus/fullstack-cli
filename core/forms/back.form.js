@@ -80,6 +80,11 @@ module.exports = [
   },
   {
     type: 'input',
+    name: 'email',
+    message: 'email:'
+  },
+  {
+    type: 'input',
     name: 'license',
     message: 'license:',
     default: 'MIT'

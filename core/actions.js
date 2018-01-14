@@ -1,7 +1,11 @@
-// Actions is the firs step. It creates the main menu where you can select
-// which project or element you want to create.
-
 const { actionHandler } = require('./handlers');
+
+/**
+ * This function check the first form argument, and choose an action to solve
+ * the user selection.
+ *
+ * @param  {String} command The project type selected by the user
+ */
 
 module.exports.checkArgs = command => new Promise((resolve, reject) => {
   switch (command) {
@@ -13,12 +17,6 @@ module.exports.checkArgs = command => new Promise((resolve, reject) => {
       break;
     case 'back':
       actionHandler('back').then(
-        response => resolve(response),
-        error => reject(error)
-      );
-      break;
-    case 'component':
-      actionHandler('component').then(
         response => resolve(response),
         error => reject(error)
       );

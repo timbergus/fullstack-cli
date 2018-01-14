@@ -46,6 +46,7 @@ const mapDispatchToProps = dispatch => {
   }
 
   {{/ redux }}
+
   render () {
     return ({{# redux }}
       <div>{{/ redux }}

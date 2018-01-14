@@ -15,8 +15,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.0.0",
-    "react-dom": "16.0.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
     "prop-types": "15.6.0",
     {{# redux }}
     "redux": "3.7.2",
@@ -27,47 +27,45 @@
     "react-router-dom": "4.2.2",
     {{/ routes}}
     {{# material-ui }}
-    "material-ui": "0.19.4",
+    "material-ui": "0.20.0",
     {{/ material-ui }}
     {{# websockets }}
-    "socket.io-client": "2.0.3",
+    "socket.io-client": "2.0.4",
     {{/ websockets }}
     "classnames": "2.2.5",
-    "moment": "2.19.1",
+    "moment": "2.20.1",
     "numeral": "2.0.6",
-    "superagent": "3.6.3"
+    "superagent": "3.8.2"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
-    "babel-eslint": "8.0.1",
+    "babel-eslint": "8.2.1",
     "babel-loader": "7.1.2",
-    "babel-preset-env": "1.6.0",
+    "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
     "clean-webpack-plugin": "0.1.17",
-    "copy-webpack-plugin": "4.1.1",
-    "css-loader": "0.28.7",
-    "esdoc": "1.0.3",
-    "eslint": "4.9.0",
-    "eslint-plugin-react": "7.4.0",
-    "extract-text-webpack-plugin": "3.0.1",
-    "file-loader": "1.1.5",
+    "copy-webpack-plugin": "4.3.1",
+    "css-loader": "0.28.8",
+    "esdoc": "1.0.4",
+    "eslint": "4.15.0",
+    "eslint-plugin-react": "7.5.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.6",
     "glob": "7.1.2",
     "html-webpack-plugin": "2.30.1",
-    "jest": "21.2.1",
+    "jest": "22.0.6",
     "json-loader": "0.5.7",
-    "node-sass": "4.5.3",
     "postcss-cssnext": "3.0.2",
-    "postcss-loader": "2.0.8",
+    "postcss-loader": "2.0.10",
     "precss": "2.0.0",
     "purify-css": "1.2.5",
     "purifycss-webpack": "0.7.0",
-    "sass-loader": "6.0.6",
-    "style-loader": "0.19.0",
+    "style-loader": "0.19.1",
     "system-bell-webpack-plugin": "1.0.0",
     "url-loader": "0.6.2",
-    "webpack": "3.7.1",
-    "webpack-dev-server": "2.9.2"
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.11.0"
   },
   "jest": {
     "testRegex": "/*.test.js$",

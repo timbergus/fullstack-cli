@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "chalk": "2.3.0",
-    "inquirer": "4.0.0",
+    "inquirer": "5.0.0",
     "mustache": "2.3.0",
     "uppercamelcase": "3.0.0"
   }

@@ -3,7 +3,7 @@
     "name": "auth.js",
     "path": ["src"],
     "template": false,
-    "dependency": false
+    "dependency": ""
   },
   {
     "name": "graphql.js",
@@ -21,19 +21,19 @@
     "name": "headers.js",
     "path": ["src", "utils"],
     "template": false,
-    "dependency": false
+    "dependency": ""
   },
   {
     "name": "headers.test.js",
     "path": ["src", "utils"],
     "template": false,
-    "dependency": false
+    "dependency": ""
   },
   {
     "name": "index.js",
     "path": ["src"],
     "template": true,
-    "dependency": false
+    "dependency": ""
   },
   {
     "name": "models.js",
@@ -81,7 +81,7 @@
     "name": "routes.js",
     "path": ["src"],
     "template": true,
-    "dependency": false
+    "dependency": ""
   },
   {
     "name": "sockets.js",
@@ -93,6 +93,6 @@
     "name": "token.js",
     "path": ["src", "handlers"],
     "template": false,
-    "dependency": false
+    "dependency": ""
   }
 ]

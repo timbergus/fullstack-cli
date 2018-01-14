@@ -20,23 +20,12 @@ const parseTemplate = (input, options) => {
 
 module.exports.createElement = (options, file, path, type = '') => {
 
-  let name = '';
-
-  if (type !== 'component') {
-    name = options.name;
-  }
+  let name = options.name;
 
   const from = resolve(tool, ...path, file.name);
-  let to = resolve(name, ...file.path, file.name === 'gitignore'
-    ?
-    `.${ file.name }`
-    :
-    file.name
+  let to = resolve(name, ...file.path, file.name === 'gitignore' ?
+    `.${ file.name }` : file.name
   );
-
-  if (type === 'component') {
-    to = resolve(name, ...file.path, `${ options.name }.jsx`);
-  }
 
   file.path.reduce((path, folder) => {
     try {
@@ -46,12 +35,6 @@ module.exports.createElement = (options, file, path, type = '') => {
   }, name);
 
   console.log(chalk.yellow('creating :::'), chalk.white(file.name));
-
-  if (type === 'component') {
-    Object.assign(options, {
-      name: upperCamelCase(options.name)
-    });
-  }
 
   if (file.template) {
     try {

@@ -1,5 +1,5 @@
-const INCREMENT = 'react-mfa/counter/INCREMENT';
-const DECREMENT = 'react-mfa/counter/DECREMENT';
+const INCREMENT = '{{ name }}/counter/INCREMENT';
+const DECREMENT = '{{ name }}/counter/DECREMENT';
 
 export function incrementCounter () {
   return { type: INCREMENT };

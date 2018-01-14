@@ -22,25 +22,25 @@ module.exports = [
     type: 'confirm',
     name: 'websockets',
     message: 'websockets:',
-    default: false
+    default: true
   },
   {
     type: 'confirm',
     name: 'material-ui',
     message: 'material-ui:',
-    default: false
+    default: true
   },
   {
     type: 'confirm',
     name: 'redux',
     message: 'redux:',
-    default: false
+    default: true
   },
   {
     type: 'confirm',
     name: 'routes',
     message: 'routes:',
-    default: false
+    default: true
   },
   {
     type: 'input',

@@ -2,7 +2,7 @@
   {
     "name": "content.js",
     "path": ["src", "app", "reducers"],
-    "template": false,
+    "template": true,
     "dependency": "redux"
   },
   {
@@ -14,7 +14,7 @@
   {
     "name": "counter.js",
     "path": ["src", "app", "reducers"],
-    "template": false,
+    "template": true,
     "dependency": "redux"
   },
   {
@@ -27,7 +27,7 @@
     "name": "index.jsx",
     "path": ["src", "app"],
     "template": true,
-    "dependency": false
+    "dependency": ""
   },
   {
     "name": "store.js",
