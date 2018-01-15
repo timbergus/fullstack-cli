@@ -3,7 +3,7 @@
   "version": "{{ version }}",
   "description": "{{ description }}",
   "main": "src/index.js",
-  "author": "{{{ author }}}<{{{ email }}}>",
+  "author": "{{{ author }}} <{{{ email }}}>",
   "license": "{{ license }}",
   "private": {{ private }},
   "scripts": {

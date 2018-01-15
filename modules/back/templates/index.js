@@ -79,7 +79,7 @@ const hapiSwaggerOptions = {
 
 // Then we register the plugins and launch the server.
 
-async function start () => {
+async function start () {
 
   await server.register([
     AuthBearer,
@@ -87,7 +87,7 @@ async function start () => {
     Vision,
     {
       plugin: HapiSwagger,
-      options: happiSwaggerOptions
+      options: hapiSwaggerOptions
     },
     {
       plugin: Good,
@@ -107,6 +107,6 @@ async function start () => {
     console.log(err);
     process.exit(1);
   }
-};
+}
 
 start();
