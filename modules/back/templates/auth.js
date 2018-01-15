@@ -18,13 +18,22 @@ const key = 'the demo secret key';
 // This function verify the token for certain protected endpoints (auth
 // strategy for the route).
 
-module.exports.validateFunc = function (token, callback) {
-  jwt.verify(token, key, (error, decoded) => {
+module.exports.validate = async function (request, token) {
+  /* jwt.verify(token, key, (error, decoded) => {
     if (error) {
       return callback(null, false);
     }
     return callback(null, true, decoded);
-  });
+  }); */
+
+
+
+  const isValid = token === '1234';
+
+  const credentials = { token };
+  const artifacts = { test: 'info' };
+
+  return { isValid, credentials, artifacts };
 };
 
 // This function generates a token adding extra data.

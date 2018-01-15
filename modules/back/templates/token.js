@@ -13,7 +13,10 @@ const { signToken, verifyToken } = require('../auth');
 // This function just returns a message in the root url of the API to let us
 // know it is working.
 
-module.exports.ping = request => '<h1>API is Working!</h1>';
+module.exports.ping = () => new Promise((resolve, reject) => {
+  resolve('<h1>API is Working!</h1>');
+  reject(Boom.badRequest('invalid query'));
+});
 
 // This function creates a token and returns it.
 

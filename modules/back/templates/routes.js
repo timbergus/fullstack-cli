@@ -14,14 +14,14 @@ const { ping, createToken, decodeToken } = require('./handlers/token');
 module.exports.routes = [
   {
     method: 'GET',
-    path: '/',
+    path:'/',
     config: {
       auth: false,
       tags: ['api'],
       description: 'Get the home page of the application',
-      notes: 'It is needed to check if the up is running in Heroku because you need a response in /.'
-    },
-    handler: ping
+      notes: 'It is needed to check if the up is running in Heroku because you need a response in /.',
+      handler: ping
+    }
   },
   {
     method: 'GET',
@@ -31,13 +31,13 @@ module.exports.routes = [
       tags: ['api'],
       description: 'Get a new token',
       notes: 'This is just a test route to create a token.',
+      handler: createToken,
       validate: {
         query: Joi.object({
           username: Joi.string().required()
         })
       }
-    },
-    handler: createToken
+    }
   },
   {
     method: 'GET',
@@ -47,13 +47,13 @@ module.exports.routes = [
       tags: ['api'],
       description: 'Verify a token',
       notes: 'This is just a test route to verify a token. It is needed to pass the token in the header with a Bearer authentication.',
+      handler: decodeToken,
       validate: {
         headers: Joi.object({
           authorization: Joi.string().required()
         }).options({ allowUnknown: true })
       }
-    },
-    handler: decodeToken
+    }
   }{{#graphql}},
   {
     method: 'POST',
