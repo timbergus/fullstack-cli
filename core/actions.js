@@ -21,6 +21,12 @@ module.exports.checkArgs = command => new Promise((resolve, reject) => {
         error => reject(error)
       );
       break;
+    case 'graphiql':
+      actionHandler('graphiql').then(
+        response => resolve(response),
+        error => reject(error)
+      );
+      break;
     default:
       reject('COMAND NOT FOUND');
       break;

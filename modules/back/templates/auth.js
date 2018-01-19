@@ -19,19 +19,19 @@ const key = 'the demo secret key';
 // strategy for the route).
 
 module.exports.validate = async function (request, token) {
-  /* jwt.verify(token, key, (error, decoded) => {
+
+  let isValid = false;
+  let credentials = { token };
+  let artifacts = null;
+
+  await jwt.verify(token, key, (error, decoded) => {
     if (error) {
-      return callback(null, false);
+      isValid = false;
+    } else {
+      isValid = true;
+      artifacts = decoded;
     }
-    return callback(null, true, decoded);
-  }); */
-
-
-
-  const isValid = token === '1234';
-
-  const credentials = { token };
-  const artifacts = { test: 'info' };
+  });
 
   return { isValid, credentials, artifacts };
 };
@@ -44,7 +44,7 @@ module.exports.signToken = function (username) {
       if (error) {
         reject({ error: error.message });
       }
-      resolve(token);
+      resolve({ token });
     });
   });
 };

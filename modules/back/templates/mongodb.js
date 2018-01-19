@@ -1,12 +1,14 @@
 const chalk = require('chalk');
 const Mongoose = require('mongoose');
 
-// The variable "mongo" contains the MongoDB connection parameters.
+// Use standard promises.
+mongoose.Promise = Promise;
 
+// The variable "mongo" contains the MongoDB connection parameters.
 const mongo = require('../config/mongodb');
 
 // Here we connect to MongoDB.
-
+//
 if (mongo.username && mongo.password) {
   Mongoose.connect(`mongodb://${ mongo.username }:${ mongo.password }@${ mongo.url }/${ mongo.database }`);
 } else {
@@ -14,7 +16,7 @@ if (mongo.username && mongo.password) {
 }
 
 // And we use the created connection to notify the user.
-
+//
 const connection = Mongoose.connection;
 
 connection.once('open', () => console.log(chalk.white.bgGreen('Mongo client connected!')));

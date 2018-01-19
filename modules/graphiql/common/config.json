@@ -1,0 +1,74 @@
+[
+  {
+    "name": ".babelrc",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".editorconfig",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".eslintignore",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".eslintrc.js",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "esdoc.json",
+    "path": [],
+    "template": true,
+    "dependency": ""
+  },
+  {
+    "name": "favicon.png",
+    "path": ["src", "images"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "index.html",
+    "path": ["src"],
+    "template": true,
+    "dependency": ""
+  },
+  {
+    "name": "gitignore",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "package.json",
+    "path": [],
+    "template": true,
+    "dependency": ""
+  },
+  {
+    "name": "postcss.config.js",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "README.md",
+    "path": [],
+    "template": true,
+    "dependency": ""
+  },
+  {
+    "name": "webpack.config.js",
+    "path": [],
+    "template": true,
+    "dependency": ""
+  }
+]

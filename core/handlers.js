@@ -8,7 +8,8 @@ const { createElement } = require('./tools');
 // These are the forms for each project type.
 const forms = {
   front: require('./forms/front.form'),
-  back: require('./forms/back.form')
+  back: require('./forms/back.form'),
+  graphiql: require('./forms/graphiql.form')
 }
 
 module.exports.actionHandler = type => new Promise((resolve, reject) => {

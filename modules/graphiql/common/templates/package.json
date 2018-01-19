@@ -15,27 +15,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "graphiql": "0.11.11",
+    "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "prop-types": "15.6.0",
-    {{# redux }}
-    "redux": "3.7.2",
-    "redux-thunk": "2.2.0",
-    "react-redux": "5.0.6",
-    {{/ redux }}
-    {{# routes}}
-    "react-router-dom": "4.2.2",
-    {{/ routes}}
-    {{# material-ui }}
-    "material-ui": "0.20.0",
-    {{/ material-ui }}
-    {{# websockets }}
-    "socket.io-client": "2.0.4",
-    {{/ websockets }}
-    "classnames": "2.2.5",
-    "moment": "2.20.1",
-    "numeral": "2.0.6",
-    "superagent": "3.8.2"
+    "react-router-dom": "4.2.2"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
@@ -54,6 +38,7 @@
     "file-loader": "1.1.6",
     "glob": "7.1.2",
     "html-webpack-plugin": "2.30.1",
+    "ignore-loader": "0.1.2",
     "jest": "22.0.6",
     "json-loader": "0.5.7",
     "postcss-cssnext": "3.0.2",

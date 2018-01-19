@@ -19,30 +19,6 @@ module.exports = [
     }
   },
   {
-    type: 'confirm',
-    name: 'websockets',
-    message: 'websockets:',
-    default: true
-  },
-  {
-    type: 'confirm',
-    name: 'material-ui',
-    message: 'material-ui:',
-    default: true
-  },
-  {
-    type: 'confirm',
-    name: 'redux',
-    message: 'redux:',
-    default: true
-  },
-  {
-    type: 'confirm',
-    name: 'routes',
-    message: 'routes:',
-    default: true
-  },
-  {
     type: 'input',
     name: 'version',
     message: 'version:',

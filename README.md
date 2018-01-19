@@ -52,3 +52,7 @@ The new API, has the following capabilities:
 To configure the databases connections, install and run the databases you need, and use the configuration files inside the __config__ folder to define the connection parameters.
 
 The API will try to connect to your database, so if you don't configure the connection properly, it will throw an error.
+
+## GraphiQL
+
+This is the [GraphiQL](https://github.com/graphql/graphiql) React component integrated in a project to generate an application that launches the tool to explore the API GraphQL endpoint.

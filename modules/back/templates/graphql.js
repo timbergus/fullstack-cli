@@ -41,7 +41,7 @@ const root = {
   deleteUser: deleteUser
 };
 
-module.exports.graphqlHandler = (request, reply) => {
+module.exports.graphqlHandler = (request) => {
   const { query } = request.payload;
-  graphql(schema, query, root).then(result => reply(result).code(200));
+  return graphql(schema, query, root);
 };
