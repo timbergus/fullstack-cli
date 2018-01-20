@@ -9,11 +9,11 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "nyc --reporter=lcov node test.js | tap-spec"
+    "test": "jest"
   },
   "keywords": [
     "node",
-    "mongo",
+    "mongodb",
     "mongoose",
     "hapi",
     "jwt",

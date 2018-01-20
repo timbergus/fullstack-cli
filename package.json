@@ -1,12 +1,14 @@
 {
   "name": "fullstack-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fullstack CLI to create and manage new full stack projects.",
   "main": "index.js",
   "author": "Gustavo Muñoz <timbergus@gmail.com>",
   "license": "MIT",
   "keywords": [
     "react",
+    "hapi",
+    "graphql",
     "cli"
   ],
   "repository": {
