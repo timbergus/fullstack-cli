@@ -25,7 +25,7 @@ module.exports.routes = [
   },
   {
     method: 'GET',
-    path: '/token/get',
+    path: '/login',
     config: {
       auth: false,
       tags: ['api'],
@@ -34,7 +34,8 @@ module.exports.routes = [
       handler: createToken,
       validate: {
         query: Joi.object({
-          username: Joi.string().required()
+          username: Joi.string().required(),
+          password: Joi.string().required()
         })
       }
     }

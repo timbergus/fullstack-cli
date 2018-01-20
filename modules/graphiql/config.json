@@ -2,7 +2,7 @@
   {
     "name": "config.json",
     "path": ["src", "app"],
-    "template": true,
+    "template": false,
     "dependency": ""
   },
   {
@@ -14,7 +14,7 @@
   {
     "name": "index.jsx",
     "path": ["src", "app"],
-    "template": true,
+    "template": false,
     "dependency": ""
   },
   {
@@ -26,7 +26,13 @@
   {
     "name": "style.css",
     "path": ["src", "app"],
-    "template": true,
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "utils.js",
+    "path": ["src", "app"],
+    "template": false,
     "dependency": ""
   },
   {
@@ -38,7 +44,7 @@
   {
     "name": "graphiql.jsx",
     "path": ["src", "app", "components"],
-    "template": true,
+    "template": false,
     "dependency": ""
   }
 ]

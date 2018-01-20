@@ -2,7 +2,7 @@ const chalk = require('chalk');
 const Mongoose = require('mongoose');
 
 // Use standard promises.
-mongoose.Promise = Promise;
+Mongoose.Promise = Promise;
 
 // The variable "mongo" contains the MongoDB connection parameters.
 const mongo = require('../config/mongodb');
