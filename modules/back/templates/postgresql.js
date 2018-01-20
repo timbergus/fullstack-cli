@@ -1,14 +1,8 @@
 const chalk = require('chalk');
-const postgresql = require('pg');
+const { Client } = require('pg');
 const config = require('../config/postgresql');
 
-const connection = new postgresql.Client({
-  user: config.user,
-  password: config.password,
-  host: config.host,
-  port: config.port,
-  database: config.database
-});
+const connection = new Client(config);
 
 connection.connect(error => {
   if (error) {

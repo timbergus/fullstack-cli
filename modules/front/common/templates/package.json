@@ -65,7 +65,7 @@
     "json-loader": "0.5.7",
     "postcss-cssnext": "3.0.2",
     "postcss-loader": "2.0.10",
-    "precss": "3.0.0",
+    "precss": "2.0.0",
     "purify-css": "1.2.5",
     "purifycss-webpack": "0.7.0",
     "style-loader": "0.19.1",

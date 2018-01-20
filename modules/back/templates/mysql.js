@@ -2,11 +2,7 @@ const chalk = require('chalk');
 const mysql = require('mysql');
 const config = require('../config/mysql');
 
-const connection = mysql.createConnection({
-  user: config.user,
-  password: config.password,
-  host: config.host
-});
+const connection = mysql.createConnection(config);
 
 connection.connect(error => {
   if (error) {

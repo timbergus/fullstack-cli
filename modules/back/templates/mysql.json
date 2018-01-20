@@ -1,7 +1,6 @@
 {
+  "host": "",
   "user": "",
   "password": "",
-  "host": "localhost",
-  "schema": "test",
-  "table": ""
+  "database": ""
 }
