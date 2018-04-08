@@ -7,8 +7,8 @@
   },
   {
     "name": "content.test.js",
-    "path": ["src", "app", "reducers"],
-    "template": false,
+    "path": ["__tests__", "reducers"],
+    "template": true,
     "dependency": "redux"
   },
   {
@@ -19,8 +19,8 @@
   },
   {
     "name": "counter.test.js",
-    "path": ["src", "app", "reducers"],
-    "template": false,
+    "path": ["__tests__", "reducers"],
+    "template": true,
     "dependency": "redux"
   },
   {

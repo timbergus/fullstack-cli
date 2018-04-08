@@ -1,9 +1,8 @@
+// @flow
+
 import React{{^routes}}, { Component }{{/routes}} from 'react';
 import { render } from 'react-dom';
 {{#websockets}}
-{{^routes}}
-import PropTypes from 'prop-types';
-{{/routes}}
 {{/websockets}}
 {{#redux}}
 import { Provider } from 'react-redux';
@@ -22,7 +21,15 @@ import store from './store';
 
 const socket = io.connect('http://localhost:1337');
 
-socket.on('connect', () => console.log('Socket connected!'));
+socket.on('connect', () => window.console.log('Socket connected!'));
+{{^routes}}
+
+type Props = {
+  socket: Object
+};
+
+type State = {};
+{{/routes}}
 {{/websockets}}
 {{#routes}}
 
@@ -30,12 +37,12 @@ import Routes from './routes';
 {{/routes}}
 {{^routes}}
 
-class App extends Component {
-{{#websockets}}
+type Props = {};
 
-  static propTypes = {
-    socket: PropTypes.object
-  }
+type State = {};
+
+class App extends Component<Props, State> {
+{{#websockets}}
 
   componentWillMount () {
     this.props.socket.on('alive', () => console.log('Connection is alive!'));
@@ -68,5 +75,5 @@ render(
   {{#redux}}
   </Provider>
   {{/redux}}
-  , document.getElementById('root')
+  , window.document.getElementById('root')
 );

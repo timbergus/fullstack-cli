@@ -1,14 +1,21 @@
-import PropTypes from 'prop-types';
+// @flow
+
 import React, { Component } from 'react';
 {{# redux }}
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getContent } from '../reducers/content';
-import { incrementCounter, decrementCounter } from '../reducers/counter';
+import { getContent } from 'reducers/content';
+import { incrementCounter, decrementCounter } from 'reducers/counter';
 {{/ redux }}
 {{# material-ui }}
 import { RaisedButton } from 'material-ui';
 {{/ material-ui }}
+{{^ redux }}
+
+type Props = {};
+
+type State = {};
+{{/ redux }}
 {{# redux }}
 
 const mapStateToProps = state => {
@@ -26,25 +33,24 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-{{/ redux }}
-{{^ redux }}export default {{/ redux }}class HomeComponent extends Component {
+type Props = {
+  getContent: Function,
+  incrementCounter: Function,
+  decrementCounter: Function,
+  content: Object,
+  counter: number
+};
 
-  static propTypes = {
-    history: PropTypes.object{{# redux }},{{/ redux }}
-    {{# redux }}
-    getContent: PropTypes.func,
-    incrementCounter: PropTypes.func,
-    decrementCounter: PropTypes.func,
-    content: PropTypes.object,
-    counter: PropTypes.number
-    {{/ redux }}
-  }
+type State = {};
+
+
+{{/ redux }}
+{{^ redux }}export default {{/ redux }}class HomeComponent extends Component<Props, State> {
   {{# redux }}
 
   componentWillMount () {
     this.props.getContent();
   }
-
   {{/ redux }}
 
   render () {

@@ -1,13 +1,19 @@
-import React from 'react';
+// @flow
+
+import React, { Component } from 'react';
 import { HashRouter, Route, Redirect } from 'react-router-dom';
 
-import LoginComponent from './components/login';
-import SecureComponent from './components/secure';
+import LoginComponent from 'components/login';
+import SecureComponent from 'components/secure';
 
-export default class Routes extends React.Component {
+type Props = {};
+
+type State = {};
+
+export default class Routes extends Component<Props, State> {
 
   isLogged () {
-    return localStorage.token && localStorage.token === '12345';
+    return window.localStorage.token && window.localStorage.token === '12345';
   }
 
   admit () {

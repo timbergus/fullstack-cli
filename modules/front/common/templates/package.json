@@ -7,12 +7,13 @@
   "license": "{{ license }}",
   "private": {{ private }},
   "scripts": {
-    "start": "webpack-dev-server --env.dev",
-    "build": "webpack -p --env.prod",
-    "build:output": "webpack -p --env.prod --profile --json >> stats.json",
+    "start": "npm test && webpack-dev-server --env.dev",
+    "test": "{{#redux}}jest && {{/redux}}npm run eslint && npm run stylelint && npm run flow",
+    "build": "npm test && webpack --env.prod",
     "docs": "esdoc -c esdoc.json",
-    "lint": "eslint -c .eslintrc.js -f checkstyle src/app/**/* > checkstyle.xml",
-    "test": "jest"
+    "eslint": "eslint src",
+    "stylelint": "stylelint src",
+    "flow": "flow"
   },
   "keywords": [
     "react",
@@ -22,13 +23,12 @@
     "material-ui"
   ],
   "dependencies": {
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
-    "prop-types": "15.6.0",
+    "react": "16.3.1",
+    "react-dom": "16.3.1",
     {{# redux }}
     "redux": "3.7.2",
     "redux-thunk": "2.2.0",
-    "react-redux": "5.0.6",
+    "react-redux": "5.0.7",
     {{/ redux }}
     {{# routes}}
     "react-router-dom": "4.2.2",
@@ -37,45 +37,47 @@
     "material-ui": "0.20.0",
     {{/ material-ui }}
     {{# websockets }}
-    "socket.io-client": "2.0.4",
+    "socket.io-client": "2.1.0",
     {{/ websockets }}
     "classnames": "2.2.5",
-    "moment": "2.20.1",
+    "image-trace-loader": "0.1.0",
+    "moment": "2.22.0",
     "numeral": "2.0.6",
     "superagent": "3.8.2"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
-    "babel-eslint": "8.2.1",
-    "babel-loader": "7.1.2",
+    "babel-eslint": "8.2.2",
+    "babel-loader": "7.1.4",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
-    "clean-webpack-plugin": "0.1.17",
-    "copy-webpack-plugin": "4.3.1",
-    "css-loader": "0.28.9",
+    "clean-webpack-plugin": "0.1.19",
+    "copy-webpack-plugin": "4.5.1",
+    "css-loader": "0.28.11",
     "esdoc": "1.0.4",
-    "eslint": "4.16.0",
-    "eslint-plugin-react": "7.5.1",
+    "eslint": "4.19.1",
+    "eslint-plugin-flowtype": "2.46.1",
+    "eslint-plugin-react": "7.7.0",
     "extract-text-webpack-plugin": "3.0.2",
-    "file-loader": "1.1.6",
+    "file-loader": "1.1.11",
     "glob": "7.1.2",
-    "html-webpack-plugin": "2.30.1",
-    "jest": "22.1.4",
+    "html-webpack-plugin": "3.2.0",
+    "jest": "22.4.3",
     "json-loader": "0.5.7",
-    "postcss-cssnext": "3.0.2",
-    "postcss-loader": "2.0.10",
-    "precss": "2.0.0",
+    "postcss-cssnext": "3.1.0",
+    "postcss-loader": "2.1.3",
+    "precss": "3.1.2",
     "purify-css": "1.2.5",
     "purifycss-webpack": "0.7.0",
-    "style-loader": "0.19.1",
+    "style-loader": "0.20.3",
+    "stylelint": "9.2.0",
     "system-bell-webpack-plugin": "1.0.0",
-    "url-loader": "0.6.2",
-    "webpack": "3.10.0",
-    "webpack-dev-server": "2.11.0"
-  },
-  "jest": {
-    "testRegex": "/*.test.js$",
-    "collectCoverage": true
+    "url-loader": "1.0.1",
+    "webpack": "4.5.0",
+    "webpack-cli": "2.0.14",
+    "webpack-dev-server": "3.1.1",
+    "webpack-merge": "4.1.2",
+    "webpack-notifier": "1.6.0"
   }
 }

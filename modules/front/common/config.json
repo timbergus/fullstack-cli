@@ -24,6 +24,12 @@
     "dependency": ""
   },
   {
+    "name": "stylelint.config.js",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
     "name": "esdoc.json",
     "path": [],
     "template": true,
@@ -32,6 +38,27 @@
   {
     "name": "favicon.png",
     "path": ["src", "images"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "fragments.js",
+    "path": [
+      "config",
+      "webpack"
+    ],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".flowconfig",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "jest.config.js",
+    "path": [],
     "template": false,
     "dependency": ""
   },

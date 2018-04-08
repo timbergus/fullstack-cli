@@ -1,8 +1,10 @@
+// @flow
+
 import thunk from 'redux-thunk';
 import { combineReducers, compose, applyMiddleware, createStore } from 'redux';
 
-import counter from './reducers/counter';
-import content from './reducers/content';
+import counter from 'reducers/counter';
+import content from 'reducers/content';
 
 const reducer = combineReducers({ counter, content });
 const middleware = [thunk];

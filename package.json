@@ -1,6 +1,6 @@
 {
   "name": "fullstack-cli",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Fullstack CLI to create and manage new full stack projects.",
   "main": "index.js",
   "author": "Gustavo Muñoz <timbergus@gmail.com>",
@@ -18,10 +18,16 @@
   "bin": {
     "fsc": "./index.js"
   },
+  "scripts": {
+    "clean": "rm -r node_modules && rm yarn.lock && yarn"
+  },
   "dependencies": {
-    "chalk": "2.3.0",
-    "inquirer": "5.0.0",
+    "chalk": "2.3.2",
+    "inquirer": "5.2.0",
     "mustache": "2.3.0",
     "uppercamelcase": "3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "4.19.1"
   }
 }

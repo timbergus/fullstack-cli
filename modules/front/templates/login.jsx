@@ -1,17 +1,20 @@
-import PropTypes from 'prop-types';
+// @flow
+
 import React, { Component } from 'react';
 {{# material-ui }}
 import { RaisedButton } from 'material-ui';
 {{/ material-ui }}
 
-export default class LoginComponent extends Component {
+type Props = {
+  history: Object
+};
 
-  static propTypes = {
-    history: PropTypes.object
-  }
+type State = {};
+
+export default class LoginComponent extends Component<Props, State> {
 
   login () {
-    localStorage.token = '12345';
+    window.localStorage.token = '12345';
     this.props.history.push('/');
   }
 

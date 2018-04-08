@@ -1,19 +1,22 @@
-import PropTypes from 'prop-types';
+// @flow
+
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
 {{# material-ui }}
 import { RaisedButton } from 'material-ui';
 {{/ material-ui }}
 
-import HomeComponent from './home';
-import ProfileComponent from './profile';
-import AboutComponent from './about';
+import HomeComponent from 'components/home';
+import ProfileComponent from 'components/profile';
+import AboutComponent from 'components/about';
 
-export default class SecureComponent extends Component {
+type Props = {
+  history: Object
+};
 
-  static propTypes = {
-    history: PropTypes.object
-  }
+type State = {};
+
+export default class SecureComponent extends Component<Props, State> {
 
   logout () {
     Reflect.deleteProperty(localStorage, 'token');
