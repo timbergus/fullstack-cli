@@ -22,7 +22,7 @@
     "clean": "rm -r node_modules && rm yarn.lock && yarn"
   },
   "dependencies": {
-    "chalk": "2.3.2",
+    "chalk": "2.4.1",
     "inquirer": "5.2.0",
     "mustache": "2.3.0",
     "uppercamelcase": "3.0.0"
