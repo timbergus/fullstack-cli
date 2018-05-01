@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.7] - 2018-01-05
+
+### Added
+
+* Updated libraries.
+* Add in back a Jest configuration file instead of having it in package.json.
+
+### Fixed
+
+* Fix GraphiQL project that didn't start due to old libraries.
+* Fix back that had a missing library in package.json.
+* Fix dev server port in GraphiQL to avoid conflict when running a front too.
+* Fix postgresql.json file that has an extra comma.
+
 ## [0.1.5] - 2018-08-04
 
 ### Added (MAIN)

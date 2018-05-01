@@ -39,7 +39,7 @@ module.exports = env => ({
   devServer: {
     contentBase: [PATHS.images],
     host: '0.0.0.0',
-    port: 3000
+    port: 3500
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css']

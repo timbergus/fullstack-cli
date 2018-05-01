@@ -1,6 +1,6 @@
 {
   "name": "fullstack-cli",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Fullstack CLI to create and manage new full stack projects.",
   "main": "index.js",
   "author": "Gustavo Muñoz <timbergus@gmail.com>",
