@@ -42,6 +42,6 @@ const root = {
 };
 
 module.exports.graphqlHandler = (request) => {
-  const { query } = request.payload;
-  return graphql(schema, query, root);
+  const { query, variables } = request.payload;
+  return graphql(schema, query, root, null, variables);
 };

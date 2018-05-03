@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.9] - 2018-03-05
+
+### Added
+
+* Add variables to GraphQL server endpoint.
+
 ## [0.1.7] - 2018-01-05
 
 ### Added
