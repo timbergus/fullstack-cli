@@ -5,10 +5,10 @@ module.exports = [
     type: 'input',
     name: 'name',
     message: 'name:',
-    validate: name => {
-      if (Boolean(name)) {
+    validate: (name) => {
+      if (name) {
         try {
-          fs.statSync(`./${ name }`);
+          fs.statSync(`./${name}`);
           return 'Project already exists';
         } catch (error) {
           return true;
@@ -16,7 +16,7 @@ module.exports = [
       } else {
         return 'Name is required';
       }
-    }
+    },
   },
   {
     type: 'checkbox',
@@ -27,73 +27,71 @@ module.exports = [
         name: 'mongodb',
         value: {
           name: 'mongodb',
-          value: "const { mongoDBConnection } = require('./ddbb/mongodb');"
+          value: "const { mongoDBConnection } = require('./ddbb/mongodb');",
         },
-        short: 'MongoDB'
+        short: 'MongoDB',
       },
       {
         name: 'mysql',
         value: {
           name: 'mysql',
-          value: "const { mySQLConnection } = require('./ddbb/mysql');"
+          value: "const { mySQLConnection } = require('./ddbb/mysql');",
         },
-        short: 'MySQL'
+        short: 'MySQL',
       },
       {
         name: 'postgresql',
         value: {
           name: 'postgresql',
-          value: "const { postgreSQLConnection } = require('./ddbb/postgresql');"
+          value: "const { postgreSQLConnection } = require('./ddbb/postgresql');",
         },
-        short: 'PostgreSQL'
-      }
-    ]
+        short: 'PostgreSQL',
+      },
+    ],
   },
   {
     type: 'confirm',
     name: 'websockets',
-    message: 'websockets:'
+    message: 'websockets:',
   },
   {
     type: 'confirm',
     name: 'graphql',
     message: 'graphql:',
-    when: function (answers) {
-      return answers.ddbb.find(db => db.name === 'mongodb');
-    }
+    when: answers => answers.ddbb.find(db => db.name === 'mongodb'),
   },
   {
     type: 'input',
     name: 'version',
     message: 'version:',
-    default: '0.0.1'
+    default: '0.0.1',
   },
   {
     type: 'input',
     name: 'description',
-    message: 'description:'
+    message: 'description:',
   },
   {
     type: 'input',
     name: 'author',
-    message: 'author:'
+    message: 'author:',
   },
   {
     type: 'input',
     name: 'email',
-    message: 'email:'
+    message: 'email:',
   },
   {
     type: 'input',
     name: 'license',
     message: 'license:',
-    default: 'MIT'
+    default: 'MIT',
   },
   {
     type: 'list',
     name: 'private',
     message: 'private:',
     default: 'true',
-    choices: ['true', 'false']
-  }
+    choices: ['true', 'false'],
+  },
 ];

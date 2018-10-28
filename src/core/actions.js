@@ -12,23 +12,29 @@ module.exports.checkArgs = command => new Promise((resolve, reject) => {
     case 'front':
       actionHandler('front').then(
         response => resolve(response),
-        error => reject(error)
+        error => reject(error),
       );
       break;
     case 'back':
       actionHandler('back').then(
         response => resolve(response),
-        error => reject(error)
+        error => reject(error),
       );
       break;
     case 'graphiql':
       actionHandler('graphiql').then(
         response => resolve(response),
-        error => reject(error)
+        error => reject(error),
+      );
+      break;
+    case 'catalog':
+      actionHandler('catalog').then(
+        response => resolve(response),
+        error => reject(error),
       );
       break;
     default:
-      reject('COMAND NOT FOUND');
+      reject(new Error('COMMAND NOT FOUND'));
       break;
   }
 });

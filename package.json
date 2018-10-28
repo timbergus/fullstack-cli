@@ -1,6 +1,6 @@
 {
   "name": "fullstack-cli",
-  "version": "0.1.9",
+  "version": "1.0.0",
   "description": "Fullstack CLI to create and manage new full stack projects.",
   "main": "index.js",
   "author": "Gustavo Muñoz <timbergus@gmail.com>",
@@ -15,19 +15,43 @@
     "type": "git",
     "url": "https://github.com/timbergus/fullstack-cli.git"
   },
+  "files": [
+    "src",
+    "package.json"
+  ],
   "bin": {
     "fsc": "./index.js"
   },
   "scripts": {
-    "clean": "rm -r node_modules && rm yarn.lock && yarn"
+    "panic": "rimraf node_modules && rimraf package-lock.json && npm install",
+    "test": "npm run eslint && npm run sasslint && npm run jest",
+    "test:watch": "jest --watch __tests__",
+    "eslint": "eslint src",
+    "sasslint": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
+    "jest": "jest"
   },
   "dependencies": {
     "chalk": "2.4.1",
-    "inquirer": "5.2.0",
-    "mustache": "2.3.0",
+    "eslint": "5.8.0",
+    "inquirer": "6.2.0",
+    "mustache": "3.0.0",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "replace-in-file": "^3.4.2",
+    "rimraf": "2.6.2",
     "uppercamelcase": "3.0.0"
   },
   "devDependencies": {
-    "eslint": "4.19.1"
+    "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "enzyme": "3.7.0",
+    "enzyme-adapter-react-16": "1.6.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-flowtype": "3.1.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1",
+    "jest": "23.6.0",
+    "sass-lint": "1.12.1"
   }
 }

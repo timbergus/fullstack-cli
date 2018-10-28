@@ -5,10 +5,10 @@ module.exports = [
     type: 'input',
     name: 'name',
     message: 'name:',
-    validate: name => {
-      if (Boolean(name)) {
+    validate: (name) => {
+      if (name) {
         try {
-          fs.statSync(`./${ name }`);
+          fs.statSync(`./${name}`);
           return 'Project already exists';
         } catch (error) {
           return true;
@@ -16,64 +16,64 @@ module.exports = [
       } else {
         return 'Name is required';
       }
-    }
+    },
   },
   {
     type: 'confirm',
     name: 'websockets',
     message: 'websockets:',
-    default: true
+    default: true,
   },
   {
     type: 'confirm',
     name: 'material-ui',
     message: 'material-ui:',
-    default: true
+    default: true,
   },
   {
     type: 'confirm',
     name: 'redux',
     message: 'redux:',
-    default: true
+    default: true,
   },
   {
     type: 'confirm',
     name: 'routes',
     message: 'routes:',
-    default: true
+    default: true,
   },
   {
     type: 'input',
     name: 'version',
     message: 'version:',
-    default: '0.0.1'
+    default: '0.0.1',
   },
   {
     type: 'input',
     name: 'description',
-    message: 'description:'
+    message: 'description:',
   },
   {
     type: 'input',
     name: 'author',
-    message: 'author:'
+    message: 'author:',
   },
   {
     type: 'input',
     name: 'email',
-    message: 'email:'
+    message: 'email:',
   },
   {
     type: 'input',
     name: 'license',
     message: 'license:',
-    default: 'MIT'
+    default: 'MIT',
   },
   {
     type: 'list',
     name: 'private',
     message: 'private:',
     default: 'true',
-    choices: ['true', 'false']
-  }
+    choices: ['true', 'false'],
+  },
 ];

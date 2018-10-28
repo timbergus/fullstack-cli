@@ -9,13 +9,13 @@ const { checkArgs } = require('./core/actions');
 const indexForm = require('./core/forms/index.form');
 
 inquirer.prompt(indexForm)
-  .then(options => {
+  .then((options) => {
     checkArgs(options.command)
-      .then(response => {
+      .then((response) => {
         if (Array.isArray(response)) {
-          response.map(line => console.log(chalk.cyan(line)))
+          response.map(line => console.log(chalk.cyan(line)));
         } else {
-          console.log(chalk.cyan(response))
+          console.log(chalk.cyan(response));
         }
       })
       .catch(error => console.log(chalk.red(error)));

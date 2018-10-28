@@ -1,0 +1,68 @@
+[
+  {
+    "name": "mock.test.js",
+    "path": ["__tests__"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "index.js",
+    "path": ["src"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "_variables.scss",
+    "path": ["src", "styles"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".gitkeep",
+    "path": ["src", "assets", "icons"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".gitkeep",
+    "path": ["src", "assets", "images"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "my-cool-component.jsx",
+    "path": ["src", "components", "my-cool-component"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "my-cool-component.md",
+    "path": ["src", "components", "my-cool-component"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "my-cool-component.scss",
+    "path": ["src", "components", "my-cool-component"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "helper.jsx",
+    "path": ["src", "components", "my-cool-component", "helper"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "helper.md",
+    "path": ["src", "components", "my-cool-component", "helper"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "helper.scss",
+    "path": ["src", "components", "my-cool-component", "helper"],
+    "template": false,
+    "dependency": ""
+  }
+]

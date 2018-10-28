@@ -15,5 +15,5 @@ module.exports = [{
   name: 'command',
   message: 'What do you want to create?',
   default: 'front',
-  choices: ['front', 'back', 'graphiql']
+  choices: ['front', 'back', 'graphiql', 'catalog'],
 }];

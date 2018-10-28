@@ -1,0 +1,122 @@
+[
+  {
+    "name": "webpack.config.js",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "styleguide.config.js",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "README.md",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "README.EX.md",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "package.json",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "jest.config.js",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".sass-lint.yml",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".gitignore",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".eslintrc",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".eslintignore",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".env",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".editorconfig",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".babelrc",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "build.js",
+    "path": ["scripts", "build"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "build.tools.js",
+    "path": ["scripts", "build"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "modules.js",
+    "path": ["config"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "test-setup.js",
+    "path": ["config", "tests"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "mediaFileTransformer.js",
+    "path": ["config", "tests"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "file.mock.js",
+    "path": ["config", "tests", "mocks"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "style.mock.js",
+    "path": ["config", "tests", "mocks"],
+    "template": false,
+    "dependency": ""
+  }
+]
