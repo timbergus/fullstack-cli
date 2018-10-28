@@ -64,7 +64,7 @@ module.exports = [
     type: 'input',
     name: 'version',
     message: 'version:',
-    default: '0.0.1',
+    default: '1.0.0',
   },
   {
     type: 'input',

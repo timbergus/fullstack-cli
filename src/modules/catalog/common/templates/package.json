@@ -1,12 +1,8 @@
 {
-  "name": "react-library-boilerplate",
-  "version": "1.0.0",
-  "description": "This is a boilerplate to create a component library for React.",
+  "name": "{{ name }}",
+  "version": "{{ version }}",
+  "description": "{{ description }}",
   "main": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/timbergus/react-library-boilerplate.git"
-  },
   "files": [
     "dist",
     "CHANGELOG.md",
@@ -16,8 +12,9 @@
   "keywords": [
     "library"
   ],
-  "author": "Gustavo Muñoz <timbergus@gmail.com>",
-  "license": "MIT",
+  "author": "{{{ author }}} <{{{ email }}}>",
+  "license": "{{ license }}",
+  "private": {{ private }},
   "config": {
     "build": "./scripts/build/build.js"
   },
@@ -64,7 +61,7 @@
     "dotenv": "6.1.0",
     "eslint": "5.8.0",
     "eslint-config-airbnb": "17.1.0",
-    "eslint-plugin-flowtype": "3.1.1",
+    "eslint-plugin-flowtype": "3.1.4",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",

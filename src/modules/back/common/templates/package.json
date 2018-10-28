@@ -24,34 +24,33 @@
     "chalk": "2.4.1",
     "good": "8.1.1",
     "good-console": "7.1.0",
-    "good-squeeze": "5.0.2",
+    "good-squeeze": "5.1.0",
     {{#graphql}}
-    "graphql": "0.13.2",
+    "graphql": "14.0.2",
     {{/graphql}}
-    "hapi": "17.4.0",
-    "hapi-auth-bearer-token": "6.0.1",
-    "hapi-swagger": "9.1.1",
+    "hapi": "17.6.0",
+    "hapi-auth-bearer-token": "6.1.0",
+    "hapi-swagger": "9.1.2",
     "inert": "5.1.0",
-    "joi": "13.2.0",
-    "jsonwebtoken": "8.2.1",
+    "joi": "14.0.1",
+    "jsonwebtoken": "8.3.0",
     {{#mongodb}}
-    "mongoose": "5.0.17",
+    "mongoose": "5.3.7",
     {{/mongodb}}
     {{#mysql}}
-    "mysql": "2.15.0",
+    "mysql": "2.16.0",
     {{/mysql}}
     {{#postgresql}}
-    "pg": "7.4.1",
+    "pg": "7.6.0",
     {{/postgresql}}
     {{#websockets}}
-    "socket.io": "2.1.0",
+    "socket.io": "2.1.1",
     {{/websockets}}
-    "vision": "5.3.2"
+    "vision": "5.4.0"
   },
   "devDependencies": {
-    "eslint": "4.19.1",
-    "jest": "22.4.3",
-    "nock": "9.2.5"
+    "eslint": "5.8.0",
+    "jest": "23.6.0"
   },
   "engines": {
     "node": ">=10.x.x",

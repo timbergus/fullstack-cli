@@ -33,7 +33,9 @@
   "dependencies": {
     "chalk": "2.4.1",
     "eslint": "5.8.0",
+    "fs-extra": "^7.0.0",
     "inquirer": "6.2.0",
+    "mkdirp": "^0.5.1",
     "mustache": "3.0.0",
     "react": "16.6.0",
     "react-dom": "16.6.0",

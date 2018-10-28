@@ -1,4 +1,5 @@
-const fs = require('fs');
+const { readFileSync, writeFileSync, copySync } = require('fs-extra');
+const { mkdirp } = require('mkdirp');
 const chalk = require('chalk');
 const Mustache = require('mustache');
 const { resolve, dirname } = require('path');
@@ -7,7 +8,7 @@ const tool = dirname(require.main.filename);
 
 const readFile = (file) => {
   try {
-    return fs.readFileSync(file, 'utf-8');
+    return readFileSync(file, 'utf-8');
   } catch (error) {
     return false;
   }
@@ -20,23 +21,17 @@ module.exports.createElement = (options, file, path) => {
   const { name } = options;
 
   const from = resolve(tool, ...path, file.name);
-  const to = resolve(name, ...file.path, file.name === 'gitignore'
-    ? `.${file.name}` : file.name);
+  const to = resolve(name, ...file.path);
 
-  file.path.reduce((p, folder) => {
-    try {
-      fs.mkdirSync(resolve(p, folder));
-    } catch (error) {
-      throw error;
-    }
-    return resolve(p, folder);
-  }, name);
+  mkdirp.sync(to);
 
   console.log(chalk.yellow('creating :::'), chalk.white(file.name));
 
+  const destination = resolve(to, file.name === 'gitignore' ? `.${file.name}` : file.name);
+
   if (file.template) {
     try {
-      fs.writeFileSync(to, parseTemplate(from, options), (writeError) => {
+      writeFileSync(destination, parseTemplate(from, options), (writeError) => {
         if (writeError) {
           console.log(`Cannot create "${file.name}"!`);
         }
@@ -45,6 +40,6 @@ module.exports.createElement = (options, file, path) => {
       throw error;
     }
   } else {
-    fs.createReadStream(from).pipe(fs.createWriteStream(to));
+    copySync(from, destination);
   }
 };

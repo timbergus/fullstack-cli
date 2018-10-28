@@ -1,4 +1,4 @@
-const fs = require('fs');
+const { mkdirSync } = require('fs');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const childProcess = require('child_process');
@@ -23,17 +23,23 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
   inquirer.prompt(forms[type])
     .then((options) => {
       const opt = { ...options };
-      if (opt.ddbb) {
+
+      if ('ddbb' in opt) {
         opt.ddbb.forEach(db => Object.assign(opt, {
           [db.name]: db.value,
         }));
-
         delete opt.ddbb;
       }
 
       // First we create the project folder.
 
-      fs.mkdirSync(`./${opt.name}`);
+      try {
+        mkdirSync(opt.name);
+      } catch (error) {
+        // Check this in Windows 10:
+        // https://stackoverflow.com/questions/48875535/cmd-command-mkdir-does-not-create-new-directory
+        reject(error);
+      }
 
       // Then we create the common files (no dependencies).
 
