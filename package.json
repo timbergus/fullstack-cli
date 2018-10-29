@@ -29,7 +29,7 @@
   },
   "scripts": {
     "panic": "rimraf node_modules && rimraf package-lock.json && npm install",
-    "test": "npm run eslint && npm run sasslint && npm run jest",
+    "test": "npm run eslint && npm run sasslint && npm run jest && codecov",
     "test:watch": "jest --watch __tests__",
     "eslint": "eslint src",
     "sasslint": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
@@ -54,6 +54,7 @@
   "devDependencies": {
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
+    "codecov": "3.1.0",
     "commitizen": "3.0.4",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.7.0",
