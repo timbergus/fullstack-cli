@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0] - 2018-10-29
+
+### Added
+
+* Add new catalog project to create React components libraries.
+
+### Fixed
+
+* All the project updated and fixed. Now all work properly.
+
 ## [0.1.9] - 2018-03-05
 
 ### Added
