@@ -1,49 +1,49 @@
 [
   {
     "name": "config.json",
-    "path": ["src", "app"],
+    "path": ["config"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "graphiql.css",
-    "path": ["src", "app"],
-    "template": false,
-    "dependency": ""
-  },
-  {
-    "name": "index.jsx",
-    "path": ["src", "app"],
-    "template": false,
-    "dependency": ""
-  },
-  {
-    "name": "routes.jsx",
-    "path": ["src", "app"],
+    "path": ["src", "styles"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "style.css",
-    "path": ["src", "app"],
+    "path": ["src", "styles"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "index.jsx",
+    "path": ["src"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": "routes.jsx",
+    "path": ["src"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "utils.js",
-    "path": ["src", "app"],
+    "path": ["src", "utils"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "login.jsx",
-    "path": ["src", "app", "components"],
+    "path": ["src", "components"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "graphiql.jsx",
-    "path": ["src", "app", "components"],
+    "path": ["src", "components"],
     "template": false,
     "dependency": ""
   }

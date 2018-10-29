@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import GraphiQL from 'graphiql';
-import { endpoints } from '../config.json';
+import { endpoints } from '../../config/config.json';
 
 export default class HomeComponent extends Component {
 

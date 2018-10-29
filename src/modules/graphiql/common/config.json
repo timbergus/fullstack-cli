@@ -31,7 +31,13 @@
   },
   {
     "name": "favicon.png",
-    "path": ["src", "images"],
+    "path": ["src", "assets", "icons"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".gitkeep",
+    "path": ["src", "assets", "images"],
     "template": false,
     "dependency": ""
   },

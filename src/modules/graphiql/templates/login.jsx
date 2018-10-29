@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { endpoints } from '../config.json';
-import { md5 } from '../utils';
+import { endpoints } from '../../config/config.json';
+import { md5 } from '../utils/utils';
 
 export default class LoginComponent extends Component {
 
