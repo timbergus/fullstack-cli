@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This is a tool for Fullstack Developers, to create the full stack of a web application. This stack contains:
+This is a tool for Fullstack Developers, to create the full stack for a web application. This stack contains:
 
 * __Front:__ Generator that creates a web application based on React that uses:
   * [Routing](https://reacttraining.com/react-router/)
