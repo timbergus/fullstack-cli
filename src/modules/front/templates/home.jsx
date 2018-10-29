@@ -8,7 +8,7 @@ import { getContent } from 'reducers/content';
 import { incrementCounter, decrementCounter } from 'reducers/counter';
 {{/ redux }}
 {{# material-ui }}
-import { RaisedButton } from 'material-ui';
+import Button from '@material-ui/core/Button';
 {{/ material-ui }}
 {{^ redux }}
 
@@ -61,18 +61,18 @@ type State = {};
       {{# redux }}  {{/ redux }}<h3>{ this.props.content.subtitle }</h3>
       {{# redux }}  {{/ redux }}<h2>{ this.props.counter }</h2>
       {{# material-ui }}
-      {{# redux }}  {{/ redux }}<RaisedButton
-      {{# redux }}  {{/ redux }}  label="Increment"
-      {{# redux }}  {{/ redux }}  onClick={ this.props.incrementCounter }
-      {{# redux }}  {{/ redux }}  labelColor="rgba(255, 255, 255, 1)"
-      {{# redux }}  {{/ redux }}  backgroundColor="rgba(119, 190, 119, 1)"
-      {{# redux }}  {{/ redux }}/>
-      {{# redux }}  {{/ redux }}<RaisedButton
-      {{# redux }}  {{/ redux }}  label="Decrement"
-      {{# redux }}  {{/ redux }}  onClick={ this.props.decrementCounter }
-      {{# redux }}  {{/ redux }}  labelColor="rgba(255, 255, 255, 1)"
-      {{# redux }}  {{/ redux }}  backgroundColor="rgba(255, 105, 97, 1)"
-      {{# redux }}  {{/ redux }}/>
+      {{# redux }}  {{/ redux }}<Button
+      {{# redux }}  {{/ redux }}  variant="contained"
+      {{# redux }}  {{/ redux }}  onClick={this.props.incrementCounter}
+      {{# redux }}  {{/ redux }}>
+      {{# redux }}  {{/ redux }}  Increment
+      {{# redux }}  {{/ redux }}</Button>
+      {{# redux }}  {{/ redux }}<Button
+      {{# redux }}  {{/ redux }}  variant="contained"
+      {{# redux }}  {{/ redux }}  onClick={this.props.decrementCounter}
+      {{# redux }}  {{/ redux }}>
+      {{# redux }}  {{/ redux }}  Decrement
+      {{# redux }}  {{/ redux }}</Button>
       {{/ material-ui }}
       {{^ material-ui }}
       {{# redux }}  {{/ redux }}<button onClick={ this.props.incrementCounter }>Increment</button>

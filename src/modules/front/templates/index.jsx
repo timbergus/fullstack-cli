@@ -7,9 +7,6 @@ import { render } from 'react-dom';
 {{#redux}}
 import { Provider } from 'react-redux';
 {{/redux}}
-{{#material-ui}}
-import { MuiThemeProvider } from 'material-ui';
-{{/material-ui}}
 {{#websockets}}
 import io from 'socket.io-client';
 {{/websockets}}
@@ -65,13 +62,7 @@ render(
   {{#redux}}
   <Provider store={ store }>
   {{/redux}}
-  {{#material-ui}}
-  {{#redux}}  {{/ redux }}<MuiThemeProvider>
-  {{/material-ui}}
-  {{#redux}}  {{/redux}}{{#material-ui}}  {{/material-ui}}<{{#routes}}Routes{{/routes}}{{^routes}}App{{/routes}}{{#websockets}} socket={ socket }{{/websockets}} />
-  {{#material-ui}}
-  {{#redux}}  {{/redux}}</MuiThemeProvider>
-  {{/material-ui}}
+  {{#redux}}  {{/redux}}<{{#routes}}Routes{{/routes}}{{^routes}}App{{/routes}}{{#websockets}} socket={ socket }{{/websockets}} />
   {{#redux}}
   </Provider>
   {{/redux}}

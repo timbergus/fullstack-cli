@@ -6,6 +6,12 @@
     "dependency": ""
   },
   {
+    "name": ".env",
+    "path": [],
+    "template": false,
+    "dependency": ""
+  },
+  {
     "name": ".editorconfig",
     "path": [],
     "template": false,
@@ -37,7 +43,13 @@
   },
   {
     "name": "favicon.png",
-    "path": ["src", "images"],
+    "path": ["src", "assets", "icons"],
+    "template": false,
+    "dependency": ""
+  },
+  {
+    "name": ".gitkeep",
+    "path": ["src", "assets", "images"],
     "template": false,
     "dependency": ""
   },

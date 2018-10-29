@@ -35,7 +35,7 @@ module.exports.setOutput = path => {
 
 module.exports.devServer = ({ host, port } = {}) => ({
   devServer: {
-    contentBase: resolve('src', 'images'),
+    contentBase: resolve('src', 'assets'),
     compress: true,
     host, // Defaults to "localhost"
     port, // Defaults to 8080
@@ -121,7 +121,7 @@ module.exports.notify = () => ({
   plugins: [
     new SystemBellPlugin(),
     new WebpackNotifierPlugin({
-      contentImage: resolve('src', 'images', 'favicon.png')
+      contentImage: resolve('src', 'assets', 'icons', 'favicon.png')
     })
   ]
 });
@@ -142,9 +142,9 @@ module.exports.extensions = () => ({
 module.exports.alias = () => ({
   resolve: {
     alias: {
-      images: resolve('src', 'images'),
-      reducers: resolve('src', 'app', 'reducers'),
-      components: resolve('src', 'app', 'components')
+      images: resolve('src', 'assets', 'images'),
+      reducers: resolve('src', 'reducers'),
+      components: resolve('src', 'components')
     }
   }
 });
@@ -153,8 +153,8 @@ module.exports.getAssets = () => ({
   plugins: [
     new CopyWebpackPlugin([
       {
-        from: resolve('src', 'images'),
-        to: resolve('dist', 'assets', 'images')
+        from: resolve('src', 'assets'),
+        to: resolve('dist', 'assets',)
       }
     ])
   ]

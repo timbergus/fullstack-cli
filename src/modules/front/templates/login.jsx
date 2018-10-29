@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 {{# material-ui }}
-import { RaisedButton } from 'material-ui';
+import Button from '@material-ui/core/Button';
 {{/ material-ui }}
 
 type Props = {
@@ -23,12 +23,12 @@ export default class LoginComponent extends Component<Props, State> {
       <div>
         <h1>Login</h1>
         {{# material-ui }}
-        <RaisedButton
-          label="Login"
+        <Button
+          variant="contained"
           onClick={ this.login.bind(this) }
-          labelColor="rgba(255, 255, 255, 1)"
-          backgroundColor="rgba(119, 158, 203, 1)"
-        />
+        >
+          Login
+        </Button>
         {{/ material-ui }}
         {{^ material-ui }}
         <button onClick={ this.login.bind(this) }>Login</button>

@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
 {{# material-ui }}
-import { RaisedButton } from 'material-ui';
+import Button from '@material-ui/core/Button';
 {{/ material-ui }}
 
 import HomeComponent from 'components/home';
@@ -32,13 +32,13 @@ export default class SecureComponent extends Component<Props, State> {
           <NavLink to="/secure/about" activeClassName="active">About</NavLink>
         </nav>
         {{# material-ui }}
-        <RaisedButton
-          label="Logout"
-          onClick={ this.logout.bind(this) }
-          labelColor="rgba(255, 255, 255, 1)"
-          backgroundColor="rgba(255, 105, 97, 1)"
+        <Button
+          variant="contained"
+          onClick={this.logout.bind(this)}
           className="home-button"
-        />
+        >
+          Logout
+        </Button>
         {{/ material-ui }}
         {{^ material-ui }}
         <button onClick={ this.logout.bind(this) }>Logout</button>

@@ -24,7 +24,7 @@ module.exports = env => {
   return merge([
     env.dev && setMode('development'),
     env.prod && setMode('production'),
-    setEntry(resolve('src', 'app', 'index.jsx')),
+    setEntry(resolve('src', 'index.jsx')),
     setOutput(resolve('dist')),
     env.dev && setSourcemapMode('development'),
     env.prod && setSourcemapMode('production'),
