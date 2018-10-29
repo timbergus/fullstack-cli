@@ -3,7 +3,7 @@ const { mkdirp } = require('mkdirp');
 const Mustache = require('mustache');
 const { resolve, dirname } = require('path');
 
-const { log } = require('../../tools/message.tools');
+const { log } = require('./tools/message.tools');
 
 const tool = dirname(require.main.filename);
 

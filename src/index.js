@@ -2,7 +2,7 @@
 
 const inquirer = require('inquirer');
 
-const { log } = require('../tools/message.tools');
+const { log } = require('./core/tools/message.tools');
 
 const { checkArgs } = require('./core/actions');
 

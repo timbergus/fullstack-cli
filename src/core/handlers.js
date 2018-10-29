@@ -2,7 +2,7 @@ const { mkdirSync } = require('fs');
 const inquirer = require('inquirer');
 const { execSync } = require('child_process');
 
-const { log } = require('../../tools/message.tools');
+const { log } = require('./tools/message.tools');
 
 const { createElement } = require('./tools');
 
