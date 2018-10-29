@@ -2,6 +2,7 @@ const { readFileSync, writeFileSync, copySync } = require('fs-extra');
 const { mkdirp } = require('mkdirp');
 const Mustache = require('mustache');
 const { resolve, dirname } = require('path');
+const { fixHiddenFiles } = require('./tools/file.tools');
 
 const { log } = require('./tools/message.tools');
 
@@ -28,7 +29,7 @@ module.exports.createElement = (options, file, path) => {
 
   log(`${file.name} created!`, 'success');
 
-  const destination = resolve(to, file.name === 'gitignore' ? `.${file.name}` : file.name);
+  const destination = resolve(to, fixHiddenFiles(file.name));
 
   if (file.template) {
     try {
