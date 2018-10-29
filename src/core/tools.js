@@ -1,8 +1,9 @@
 const { readFileSync, writeFileSync, copySync } = require('fs-extra');
 const { mkdirp } = require('mkdirp');
-const chalk = require('chalk');
 const Mustache = require('mustache');
 const { resolve, dirname } = require('path');
+
+const { log } = require('../../tools/message.tools');
 
 const tool = dirname(require.main.filename);
 
@@ -25,7 +26,7 @@ module.exports.createElement = (options, file, path) => {
 
   mkdirp.sync(to);
 
-  console.log(chalk.yellow('creating :::'), chalk.white(file.name));
+  log(`${file.name} created!`, 'success');
 
   const destination = resolve(to, file.name === 'gitignore' ? `.${file.name}` : file.name);
 
@@ -33,7 +34,7 @@ module.exports.createElement = (options, file, path) => {
     try {
       writeFileSync(destination, parseTemplate(from, options), (writeError) => {
         if (writeError) {
-          console.log(`Cannot create "${file.name}"!`);
+          log(`Cannot create "${file.name}"!`, 'error');
         }
       });
     } catch (error) {

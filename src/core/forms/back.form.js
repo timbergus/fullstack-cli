@@ -1,4 +1,4 @@
-const fs = require('fs');
+const { statSync } = require('fs');
 
 module.exports = [
   {
@@ -8,7 +8,7 @@ module.exports = [
     validate: (name) => {
       if (name) {
         try {
-          fs.statSync(`./${name}`);
+          statSync(`./${name}`);
           return 'Project already exists';
         } catch (error) {
           return true;

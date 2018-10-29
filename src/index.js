@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-const chalk = require('chalk');
 const inquirer = require('inquirer');
+
+const { log } = require('../tools/message.tools');
 
 const { checkArgs } = require('./core/actions');
 
@@ -13,11 +14,13 @@ inquirer.prompt(indexForm)
     checkArgs(options.command)
       .then((response) => {
         if (Array.isArray(response)) {
-          response.map(line => console.log(chalk.cyan(line)));
+          log();
+          response.forEach(line => log(line, 'info'));
         } else {
-          console.log(chalk.cyan(response));
+          log();
+          log(response, 'info');
         }
       })
-      .catch(error => console.log(chalk.red(error)));
+      .catch(error => log(error, 'error'));
   })
-  .catch(error => console.log(chalk.red(error)));
+  .catch(error => log(error, 'error'));

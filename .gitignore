@@ -2,5 +2,6 @@
 /dist/
 /.vscode/
 /__tests__/coverage
+package-lock.json
 .DS_Store
 *.log

@@ -1,7 +1,8 @@
 const { mkdirSync } = require('fs');
-const chalk = require('chalk');
 const inquirer = require('inquirer');
-const childProcess = require('child_process');
+const { execSync } = require('child_process');
+
+const { log } = require('../../tools/message.tools');
 
 const { createElement } = require('./tools');
 
@@ -43,6 +44,7 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
 
       // Then we create the common files (no dependencies).
 
+      log();
       /* eslint-disable-next-line global-require, import/no-dynamic-require */
       require(`../modules/${type}/common/config.json`).forEach((file) => {
         createElement(opt, file, ['modules', type, 'common', 'templates']);
@@ -67,17 +69,18 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
       // First we initialize an empty git repository.
 
       try {
-        childProcess.execSync(`cd ./${opt.name} && git init`);
+        execSync(`cd ./${opt.name} && git init`, { stdio: [process.stderr] });
       } catch (error) {
         reject(new Error('Cannot create git repository!'));
       }
 
       // And then we install the dependencies.
 
-      console.log(chalk.green('Installing dependencies!'));
+      log();
+      log('Installing dependencies!', 'working');
 
       try {
-        childProcess.execSync(`cd ./${opt.name} && npm install`);
+        execSync(`cd ./${opt.name} && npm install`, { stdio: [process.stderr] });
       } catch (error) {
         reject(new Error('Cannot install dependencies!'));
       }
@@ -87,11 +90,11 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
       resolve([
         `Project "${opt.name}" created!\n`,
         'Instructions:',
-        '* To start the project:\tnpm start',
-        '* To build the project:\tnpm run build',
-        '* To create the docs:\tnpm run docs',
-        '* To check the code:\tnpm run lint',
-        '* To test the project:\tnpm test',
+        'To start the project => npm start',
+        'To build the project => npm run build',
+        'To create the docs => npm run docs',
+        'To check the code => npm run lint',
+        'To test the project => npm test',
       ]);
     })
     .catch(() => reject(new Error('Cannot create project!')));
