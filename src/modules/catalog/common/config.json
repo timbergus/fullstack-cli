@@ -42,7 +42,7 @@
     "dependency": ""
   },
   {
-    "name": ".gitignore",
+    "name": "gitignore",
     "path": [],
     "template": false,
     "dependency": ""
