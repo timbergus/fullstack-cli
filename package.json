@@ -2,7 +2,7 @@
   "name": "fullstack-cli",
   "version": "0.0.0-development",
   "description": "Fullstack CLI to create and manage new full stack projects.",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Gustavo Muñoz <timbergus@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -20,7 +20,7 @@
     "package.json"
   ],
   "bin": {
-    "fsc": "./index.js"
+    "fullstack-cli": "./src/index.js"
   },
   "config": {
     "commitizen": {
