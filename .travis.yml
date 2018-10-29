@@ -10,7 +10,7 @@ node_js:
 install:
   - npm install
 script:
-  - npm test
+  - npm test && npm run codecov
 after_success:
   - npm run travis-deploy-once "npm run semantic-release"
 branches:

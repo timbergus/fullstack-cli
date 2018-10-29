@@ -29,7 +29,8 @@
   },
   "scripts": {
     "panic": "rimraf node_modules && rimraf package-lock.json && npm install",
-    "test": "npm run eslint && npm run sasslint && npm run jest && codecov",
+    "test": "npm run eslint && npm run sasslint && npm run jest",
+    "codecov": "codecov",
     "test:watch": "jest --watch __tests__",
     "eslint": "eslint src",
     "sasslint": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
