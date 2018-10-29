@@ -4,6 +4,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Build Status](https://travis-ci.org/timbergus/fullstack-cli.svg?branch=master)](https://travis-ci.org/timbergus/fullstack-cli)
 [![codecov](https://codecov.io/gh/timbergus/fullstack-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/timbergus/fullstack-cli)
+[![Greenkeeper badge](https://badges.greenkeeper.io/timbergus/fullstack-cli.svg)](https://greenkeeper.io/)
 
 ## Introduction
 
