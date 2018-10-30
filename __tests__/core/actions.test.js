@@ -4,9 +4,8 @@ describe('Args must be checked', () => {
   jest.genMockFromModule('../../src/core/actions');
   const handlers = jest.genMockFromModule('../../src/core/handlers');
 
-  handlers.actionHandler = () => new Promise(resolve => resolve(true));
-
   test('Must launch the "front" generation process.', () => {
+    handlers.actionHandler = () => new Promise(resolve => resolve(true));
     checkArgs('front').then((response) => {
       expect(response).toBe(true);
     });
