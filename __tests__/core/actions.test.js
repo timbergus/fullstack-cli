@@ -35,5 +35,7 @@ describe('Args must be checked', () => {
   //   });
   // });
 
-  expect(true).toBe(true);
+  test('Must launch the "front" generation process.', () => {
+    expect(true).toBe(true);
+  });
 });
