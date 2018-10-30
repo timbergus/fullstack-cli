@@ -1,7 +1,6 @@
 const { actionHandler } = require('../../src/core/handlers');
 
 test('Must launch the "front" generation process.', () => {
-
   // jest.mock('../../src/core/handlers', () => ({ actionHandler: jest.fn() }));
 
   // const { actionHandler } = require('../../src/core/handlers');
