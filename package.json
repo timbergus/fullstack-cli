@@ -34,7 +34,7 @@
     "test:watch": "jest --watch __tests__",
     "eslint": "eslint src",
     "sasslint": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
-    "jest": "jest",
+    "jest": "jest --detectOpenHandles",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release",
     "commit": "git-cz"

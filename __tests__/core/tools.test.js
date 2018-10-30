@@ -47,7 +47,7 @@ test('readFile must return a file parsed if template.', () => {
   };
 
   const file = {
-    name: 'template.mock.txt',
+    name: 'file-to-copy.mock.txt',
     path: [],
     template: true,
   };
@@ -56,6 +56,6 @@ test('readFile must return a file parsed if template.', () => {
 
   createElement(options, file, path);
 
-  expect(existsSync('./__tests__/results/template.mock.txt'))
+  expect(existsSync('./__tests__/results/file-to-copy.mock.txt'))
     .toBe(true);
 });
