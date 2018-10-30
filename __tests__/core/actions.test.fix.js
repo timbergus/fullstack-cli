@@ -12,27 +12,27 @@ describe('Args must be checked', () => {
     });
   });
 
-  test('Must launch the "back" generation process.', () => {
-    checkArgs('back').then((response) => {
-      expect(response).toBe(true);
-    });
-  });
+  // test('Must launch the "back" generation process.', () => {
+  //   checkArgs('back').then((response) => {
+  //     expect(response).toBe(true);
+  //   });
+  // });
 
-  test('Must launch the "graphiql" generation process.', () => {
-    checkArgs('graphiql').then((response) => {
-      expect(response).toBe(true);
-    });
-  });
+  // test('Must launch the "graphiql" generation process.', () => {
+  //   checkArgs('graphiql').then((response) => {
+  //     expect(response).toBe(true);
+  //   });
+  // });
 
-  test('Must launch the "catalog" generation process.', () => {
-    checkArgs('catalog').then((response) => {
-      expect(response).toBe(true);
-    });
-  });
+  // test('Must launch the "catalog" generation process.', () => {
+  //   checkArgs('catalog').then((response) => {
+  //     expect(response).toBe(true);
+  //   });
+  // });
 
-  test('Must launch an error if the option does not exists.', () => {
-    checkArgs('').catch((error) => {
-      expect(error).toBeDefined();
-    });
-  });
+  // test('Must launch an error if the option does not exists.', () => {
+  //   checkArgs('').catch((error) => {
+  //     expect(error).toBeDefined();
+  //   });
+  // });
 });
