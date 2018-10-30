@@ -45,3 +45,8 @@ module.exports.createElement = (options, file, path) => {
     copySync(from, destination);
   }
 };
+
+// Just for testing.
+
+module.exports.readFile = readFile;
+module.exports.parseTemplate = parseTemplate;
