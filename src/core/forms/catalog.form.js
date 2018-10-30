@@ -1,22 +1,11 @@
-const { statSync } = require('fs');
+const { validateProjectName } = require('../tools/file.tools');
 
 module.exports = [
   {
     type: 'input',
     name: 'name',
     message: 'name:',
-    validate: (name) => {
-      if (name) {
-        try {
-          statSync(`./${name}`);
-          return 'Project already exists';
-        } catch (error) {
-          return true;
-        }
-      } else {
-        return 'Name is required';
-      }
-    },
+    validate: name => validateProjectName(name),
   },
   {
     type: 'input',

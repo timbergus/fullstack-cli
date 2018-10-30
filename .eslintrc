@@ -23,7 +23,8 @@
     ],
     "globals": {
       "expect": false,
-      "it": false,
-      "jest": false
+      "test": false,
+      "jest": false,
+      "beforeEach": false
     }
 }

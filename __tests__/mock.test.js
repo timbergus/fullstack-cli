@@ -1,1 +1,1 @@
-it('Cannot fail', () => expect(true).toBe(true));
+test('Cannot fail', () => expect(true).toBe(true));
