@@ -17,9 +17,9 @@ export default class LoginComponent extends Component {
     };
   }
 
-  login () {
+  login = () => {
     const { username, password } = this.state;
-    fetch(`${ endpoints.login }?username=${ username }&password=${ md5(password) }`)
+    fetch(`${endpoints.login}?username=${ username }&password=${ md5(password) }`)
       .then(response => response.json())
       .then(response => {
         if (response.token) {
@@ -29,10 +29,10 @@ export default class LoginComponent extends Component {
       });
   }
 
-  onChange (event) {
-    this.setState(Object.assign(this.state, {
+  onChange = (event) => {
+    this.setState({
       [event.target.name]: event.target.value
-    }));
+    });
   }
 
   render () {
@@ -43,17 +43,17 @@ export default class LoginComponent extends Component {
           type="text"
           name="username"
           placeholder="username"
-          value={ this.state.username }
-          onChange={ this.onChange.bind(this) }
+          value={this.state.username}
+          onChange={this.onChange}
         />
         <input
           type="password"
           name="password"
           placeholder="password"
-          value={ this.state.password }
-          onChange={ this.onChange.bind(this) }
+          value={this.state.password}
+          onChange={this.onChange}
         />
-        <button id="login" onClick={ this.login.bind(this) }>LOGIN</button>
+        <button id="login" onClick={this.login}>LOGIN</button>
       </div>
     );
   }

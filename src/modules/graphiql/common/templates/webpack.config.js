@@ -9,8 +9,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const PATHS = {
-  app: resolve(__dirname, 'src', 'app', 'index.jsx'),
-  images: resolve(__dirname, 'src', 'images'),
+  app: resolve(__dirname, 'src', 'index.jsx'),
+  images: resolve(__dirname, 'src', 'assets', 'images'),
   build: resolve(__dirname, 'dist'),
   html: resolve(__dirname, 'src', 'index.html'),
   nodeModules: resolve(__dirname, 'node_modules')
@@ -39,7 +39,7 @@ module.exports = env => ({
   devServer: {
     contentBase: [PATHS.images],
     host: '0.0.0.0',
-    port: 3500
+    port: 3300
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css']
@@ -98,7 +98,7 @@ module.exports = env => ({
     ]),
     new ExtractTextPlugin('styles.[chunkhash].css'),
     new PurifyCSSPlugin({
-      paths: glob.sync(resolve(__dirname, 'src', 'app', '**', '*'))
+      paths: glob.sync(resolve(__dirname, 'src', '**', '*'))
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: [

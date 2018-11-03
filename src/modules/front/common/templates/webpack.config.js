@@ -57,7 +57,7 @@ module.exports = env => {
       }
     }),
     notify(),
-    purifyCSS(glob.sync(resolve('src', 'app', '**', '*'), {
+    purifyCSS(glob.sync(resolve('src', '**', '*'), {
       nodir: true
     })),
     extensions(),
