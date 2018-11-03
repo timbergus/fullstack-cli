@@ -1,13 +1,11 @@
 # Fullstack-CLI
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fdedb56c4f634970b8c78922310546a3)](https://app.codacy.com/app/timbergus/fullstack-cli?utm_source=github.com&utm_medium=referral&utm_content=timbergus/fullstack-cli&utm_campaign=Badge_Grade_Dashboard)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Build Status](https://travis-ci.org/timbergus/fullstack-cli.svg?branch=master)](https://travis-ci.org/timbergus/fullstack-cli)
 [![codecov](https://codecov.io/gh/timbergus/fullstack-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/timbergus/fullstack-cli)
 [![Greenkeeper badge](https://badges.greenkeeper.io/timbergus/fullstack-cli.svg)](https://greenkeeper.io/)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/timbergus/fullstack-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/timbergus/fullstack-cli/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/timbergus/fullstack-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/timbergus/fullstack-cli/context:javascript)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fdedb56c4f634970b8c78922310546a3)](https://app.codacy.com/app/timbergus/fullstack-cli?utm_source=github.com&utm_medium=referral&utm_content=timbergus/fullstack-cli&utm_campaign=Badge_Grade_Dashboard)
 
 ## Introduction
 
