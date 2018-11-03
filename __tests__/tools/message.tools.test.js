@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-const { highlight, log } = require('../../../src/core/tools/message.tools');
+const { highlight, log } = require('../../src/tools/message.tools');
 
 describe('Message tools', () => {
   test('should highlight a fragment of a message.', () => {

@@ -1,4 +1,4 @@
-const catalogForm = require('../../../src/core/forms/catalog.form');
+const catalogForm = require('../../src/forms/catalog.form');
 
 test('Catalog form ask for a name if you don\'t set a project name.', () => {
   const response = catalogForm[0].validate();

@@ -2,16 +2,16 @@ const { mkdirSync } = require('fs');
 const inquirer = require('inquirer');
 const { execSync } = require('child_process');
 
-const { log } = require('./tools/message.tools');
+const { log } = require('../tools/message.tools');
 
-const { createElement } = require('./tools');
+const { createElement } = require('../tools/core.tools');
 
 // These are the forms for each project type.
 
-const front = require('./forms/front.form');
-const back = require('./forms/back.form');
-const graphiql = require('./forms/graphiql.form');
-const catalog = require('./forms/catalog.form');
+const front = require('../forms/front.form');
+const back = require('../forms/back.form');
+const graphiql = require('../forms/graphiql.form');
+const catalog = require('../forms/catalog.form');
 
 const forms = {
   front,

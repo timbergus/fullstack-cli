@@ -1,4 +1,4 @@
-const indexForm = require('../../../src/core/forms/index.form');
+const indexForm = require('../../src/forms/index.form');
 
 test('Index for must be imported.', () => {
   expect.assertions(1);

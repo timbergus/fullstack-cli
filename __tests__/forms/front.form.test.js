@@ -1,4 +1,4 @@
-const frontForm = require('../../../src/core/forms/front.form');
+const frontForm = require('../../src/forms/front.form');
 
 test('Front form ask for a name if you don\'t set a project name.', () => {
   const response = frontForm[0].validate();

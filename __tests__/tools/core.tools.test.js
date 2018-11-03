@@ -1,5 +1,5 @@
 const { existsSync } = require('fs');
-const { readFile, parseTemplate, createElement } = require('../../src/core/tools');
+const { readFile, parseTemplate, createElement } = require('../../src/tools/core.tools');
 
 test('parseTemplate must return a proper content.', () => {
   const options = {

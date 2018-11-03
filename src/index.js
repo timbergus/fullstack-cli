@@ -2,12 +2,12 @@
 
 const inquirer = require('inquirer');
 
-const { log } = require('./core/tools/message.tools');
+const { log } = require('./tools/message.tools');
 
 const { checkArgs } = require('./core/actions');
 
 // This is the first form that the user sees.
-const indexForm = require('./core/forms/index.form');
+const indexForm = require('./forms/index.form');
 
 inquirer.prompt(indexForm)
   .then((options) => {

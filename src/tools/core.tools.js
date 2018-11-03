@@ -2,9 +2,9 @@ const { readFileSync, writeFileSync, copySync } = require('fs-extra');
 const { mkdirp } = require('mkdirp');
 const Mustache = require('mustache');
 const { resolve, dirname } = require('path');
-const { fixHiddenFiles } = require('./tools/file.tools');
+const { fixHiddenFiles } = require('./file.tools');
 
-const { log } = require('./tools/message.tools');
+const { log } = require('./message.tools');
 
 const tool = dirname(require.main.filename);
 

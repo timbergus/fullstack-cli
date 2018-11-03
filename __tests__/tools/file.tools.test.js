@@ -1,4 +1,4 @@
-const { fixHiddenFiles, validateProjectName } = require('../../../src/core/tools/file.tools');
+const { fixHiddenFiles, validateProjectName } = require('../../src/tools/file.tools');
 
 describe('File tools', () => {
   test('should add a point to gitignore files.', () => {

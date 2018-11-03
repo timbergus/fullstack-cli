@@ -1,4 +1,4 @@
-const backForm = require('../../../src/core/forms/back.form');
+const backForm = require('../../src/forms/back.form');
 
 test('Back form ask for a name if you don\'t set a project name.', () => {
   const response = backForm[0].validate();

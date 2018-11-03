@@ -1,4 +1,4 @@
-const graphiqlForm = require('../../../src/core/forms/graphiql.form');
+const graphiqlForm = require('../../src/forms/graphiql.form');
 
 test('GraphiQL form ask for a name if you don\'t set a project name.', () => {
   const response = graphiqlForm[0].validate();
