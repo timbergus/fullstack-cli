@@ -1,19 +1,21 @@
 const { actionHandler } = require('../../src/core/handlers');
 
-test('Must launch the "front" generation process.', () => {
-  // jest.mock('../../src/core/handlers', () => ({ actionHandler: jest.fn() }));
+describe('Handlers', ()=> {
+  test('should launch the "front" generation process.', () => {
+    // jest.mock('../../src/core/handlers', () => ({ actionHandler: jest.fn() }));
 
-  // const { actionHandler } = require('../../src/core/handlers');
+    // const { actionHandler } = require('../../src/core/handlers');
 
-  // actionHandler.mockImplementation(() => Promise.resolve('test1234'));
+    // actionHandler.mockImplementation(() => Promise.resolve('test1234'));
 
-  // const response = await checkArgs('front');
+    // const response = await checkArgs('front');
 
-  // console.log(response);
+    // console.log(response);
 
-  // const result = await actionHandler('front');
+    // const result = await actionHandler('front');
 
-  // console.log(result);
+    // console.log(result);
 
-  expect(true).toBe(true);
+    expect(true).toBe(true);
+  });
 });

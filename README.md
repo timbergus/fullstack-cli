@@ -5,6 +5,8 @@
 [![Build Status](https://travis-ci.org/timbergus/fullstack-cli.svg?branch=master)](https://travis-ci.org/timbergus/fullstack-cli)
 [![codecov](https://codecov.io/gh/timbergus/fullstack-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/timbergus/fullstack-cli)
 [![Greenkeeper badge](https://badges.greenkeeper.io/timbergus/fullstack-cli.svg)](https://greenkeeper.io/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/timbergus/fullstack-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/timbergus/fullstack-cli/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/timbergus/fullstack-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/timbergus/fullstack-cli/context:javascript)
 
 ## Introduction
 

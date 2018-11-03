@@ -7,8 +7,8 @@ notifications:
   email: false
 node_js:
   - 10
-install:
-  - npm install
+# install:
+#   - npm install
 script:
   - npm test && npm run codecov
 after_success:
