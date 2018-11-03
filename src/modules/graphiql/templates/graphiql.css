@@ -107,7 +107,7 @@
   border-bottom: 1px solid #d0d0d0;
   border-right: none;
   border-top: none;
-  color: #3B5998;
+  color: #3b5998;
   cursor: pointer;
   font-size: 14px;
   margin: 0;
@@ -124,9 +124,9 @@
   border-left: 0;
 }
 
-.graphiql-container .docExplorerShow:before {
-  border-left: 2px solid #3B5998;
-  border-top: 2px solid #3B5998;
+.graphiql-container .docExplorerShow::before {
+  border-left: 2px solid #3b5998;
+  border-top: 2px solid #3b5998;
   content: '';
   display: inline-block;
   height: 9px;
@@ -229,7 +229,7 @@
 }
 
 .graphiql-container .variable-editor-title {
-  background: #eeeeee;
+  background: #eee;
   border-bottom: 1px solid #d6d6d6;
   border-top: 1px solid #e0e0e0;
   color: #777;
@@ -269,8 +269,8 @@
   position: relative;
 }
 
-.graphiql-container .footer:before {
-  background: #eeeeee;
+.graphiql-container .footer::before {
+  background: #eee;
   bottom: 0;
   content: " ";
   left: -13px;
@@ -285,14 +285,14 @@
 }
 
 .graphiql-container .result-window .CodeMirror-gutters {
-  background-color: #eeeeee;
+  background-color: #eee;
   border-color: #e0e0e0;
   cursor: col-resize;
 }
 
 .graphiql-container .result-window .CodeMirror-foldgutter,
-.graphiql-container .result-window .CodeMirror-foldgutter-open:after,
-.graphiql-container .result-window .CodeMirror-foldgutter-folded:after {
+.graphiql-container .result-window .CodeMirror-foldgutter-open::after,
+.graphiql-container .result-window .CodeMirror-foldgutter-folded::after {
   padding-left: 3px;
 }
 
@@ -541,7 +541,7 @@
 }
 
 .CodeMirror-hint-information .infoType {
-  color: #CA9800;
+  color: #ca9800;
   cursor: pointer;
   display: inline;
   margin-right: 0.5em;
@@ -626,7 +626,7 @@ div.CodeMirror-lint-tooltip > * + * {
   border-radius: 4px;
   background: #08f;
   background: -webkit-gradient(linear, left top, left bottom, from(#43A8FF), to(#0F83E8));
-  background: linear-gradient(#43A8FF, #0F83E8);
+  background: linear-gradient(#43A8FF, #0f83e8);
   -webkit-box-shadow:
     0 1px 1px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -663,62 +663,62 @@ div.CodeMirror-lint-tooltip > * + * {
 
 /* Keyword */
 .cm-keyword {
-  color: #B11A04;
+  color: #b11a04;
 }
 
 /* OperationName, FragmentName */
 .cm-def {
-  color: #D2054E;
+  color: #d2054e;
 }
 
 /* FieldName */
 .cm-property {
-  color: #1F61A0;
+  color: #1f61a0;
 }
 
 /* FieldAlias */
 .cm-qualifier {
-  color: #1C92A9;
+  color: #1c92a9;
 }
 
 /* ArgumentName and ObjectFieldName */
 .cm-attribute {
-  color: #8B2BB9;
+  color: #8b2bb9;
 }
 
 /* Number */
 .cm-number {
-  color: #2882F9;
+  color: #2882f9;
 }
 
 /* String */
 .cm-string {
-  color: #D64292;
+  color: #d64292;
 }
 
 /* Boolean */
 .cm-builtin {
-  color: #D47509;
+  color: #d47509;
 }
 
 /* EnumValue */
 .cm-string-2 {
-  color: #0B7FC7;
+  color: #0b7fc7;
 }
 
 /* Variable */
 .cm-variable {
-  color: #397D13;
+  color: #397d13;
 }
 
 /* Directive */
 .cm-meta {
-  color: #B33086;
+  color: #b33086;
 }
 
 /* Type */
 .cm-atom {
-  color: #CA9800;
+  color: #ca9800;
 }
 /* BASICS */
 
@@ -738,7 +738,8 @@ div.CodeMirror-lint-tooltip > * + * {
   padding: 0 4px; /* Horizontal padding of content */
 }
 
-.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
   background-color: white; /* The little square between H and V scrollbars */
 }
 
@@ -834,7 +835,8 @@ div.CodeMirror-overwrite div.CodeMirror-cursor {}
 
 .cm-negative {color: #d44;}
 .cm-positive {color: #292;}
-.cm-header, .cm-strong {font-weight: bold;}
+.cm-header,
+.cm-strong {font-weight: bold;}
 .cm-em {font-style: italic;}
 .cm-link {text-decoration: underline;}
 .cm-strikethrough {text-decoration: line-through;}
@@ -848,7 +850,7 @@ div.CodeMirror-overwrite div.CodeMirror-cursor {}
 
 div.CodeMirror span.CodeMirror-matchingbracket {color: #0f0;}
 div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
-.CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
+.CodeMirror-matchingtag { background: rgba(255, 150, 0, 0.3); }
 .CodeMirror-activeline-background {background: #e8f2ff;}
 
 /* STOP */
@@ -868,7 +870,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   /* See overflow: hidden in .CodeMirror */
   margin-bottom: -30px; margin-right: -30px;
   outline: none; /* Prevent dragging from highlighting the element */
-  overflow: scroll !important; /* Things will break if this is overridden */
+  overflow: scroll; /* Things will break if this is overridden */
   padding-bottom: 30px;
   position: relative;
 }
@@ -880,7 +882,10 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 /* The fake, visible scrollbars. Used to force redraw during scrolling
    before actual scrolling happens, thus preventing shaking and
    flickering artifacts. */
-.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+.CodeMirror-vscrollbar,
+.CodeMirror-hscrollbar,
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
   display: none;
   position: absolute;
   z-index: 6;
@@ -918,8 +923,8 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   *display:inline;
 }
 .CodeMirror-gutter-wrapper {
-  background: none !important;
-  border: none !important;
+  background: none;
+  border: none;
   position: absolute;
   z-index: 4;
 }
@@ -1047,7 +1052,7 @@ div.CodeMirror-dragcursors {
 }
 
 /* See issue #2901 */
-.cm-tab-wrap-hack:after { content: ''; }
+.cm-tab-wrap-hack::after { content: ''; }
 
 /* Help users use markselection to safely style text background */
 span.CodeMirror-selectedtext { background: none; }
@@ -1122,7 +1127,7 @@ span.CodeMirror-selectedtext { background: none; }
 }
 
 .graphiql-container .doc-explorer-back {
-  color: #3B5998;
+  color: #3b5998;
   cursor: pointer;
   margin: -7px 0 -6px -8px;
   overflow-x: hidden;
@@ -1135,9 +1140,9 @@ span.CodeMirror-selectedtext { background: none; }
   width: 0;
 }
 
-.graphiql-container .doc-explorer-back:before {
-  border-left: 2px solid #3B5998;
-  border-top: 2px solid #3B5998;
+.graphiql-container .doc-explorer-back::before {
+  border-left: 2px solid #3b5998;
+  border-top: 2px solid #3b5998;
   content: '';
   display: inline-block;
   height: 9px;
@@ -1217,15 +1222,15 @@ span.CodeMirror-selectedtext { background: none; }
 }
 
 .graphiql-container .keyword {
-  color: #B11A04;
+  color: #b11a04;
 }
 
 .graphiql-container .type-name {
-  color: #CA9800;
+  color: #ca9800;
 }
 
 .graphiql-container .field-name {
-  color: #1F61A0;
+  color: #1f61a0;
 }
 
 .graphiql-container .field-short-description {
@@ -1236,11 +1241,11 @@ span.CodeMirror-selectedtext { background: none; }
 }
 
 .graphiql-container .enum-value {
-  color: #0B7FC7;
+  color: #0b7fc7;
 }
 
 .graphiql-container .arg-name {
-  color: #8B2BB9;
+  color: #8b2bb9;
 }
 
 .graphiql-container .arg {
@@ -1255,19 +1260,19 @@ span.CodeMirror-selectedtext { background: none; }
   margin: inherit;
 }
 
-.graphiql-container .arg:first-child:nth-last-child(2):after {
+.graphiql-container .arg:first-child:nth-last-child(2)::after {
   content: ', ';
 }
 
 .graphiql-container .arg-default-value {
-  color: #43A047;
+  color: #43a047;
 }
 
 .graphiql-container .doc-deprecation {
   background: #fffae8;
   -webkit-box-shadow: inset 0 0 1px #bfb063;
   box-shadow: inset 0 0 1px #bfb063;
-  color: #867F70;
+  color: #867f70;
   line-height: 16px;
   margin: 8px -8px;
   max-height: 80px;
@@ -1276,7 +1281,7 @@ span.CodeMirror-selectedtext { background: none; }
   border-radius: 3px;
 }
 
-.graphiql-container .doc-deprecation:before {
+.graphiql-container .doc-deprecation::before {
   content: 'Deprecated:';
   color: #c79b2e;
   cursor: default;
@@ -1324,7 +1329,7 @@ span.CodeMirror-selectedtext { background: none; }
   position: relative;
 }
 
-.graphiql-container .search-box:before {
+.graphiql-container .search-box::before {
   content: '\26b2';
   cursor: pointer;
   display: block;
@@ -1396,10 +1401,10 @@ span.CodeMirror-selectedtext { background: none; }
 .CodeMirror-foldgutter-folded {
   cursor: pointer;
 }
-.CodeMirror-foldgutter-open:after {
+.CodeMirror-foldgutter-open::after {
   content: "\25BE";
 }
-.CodeMirror-foldgutter-folded:after {
+.CodeMirror-foldgutter-folded::after {
   content: "\25B8";
 }
 .graphiql-container .history-contents {
@@ -1478,7 +1483,7 @@ span.CodeMirror-selectedtext { background: none; }
   background: #fffae8;
   -webkit-box-shadow: inset 0 1px 1px -1px #bfb063;
   box-shadow: inset 0 1px 1px -1px #bfb063;
-  color: #867F70;
+  color: #867f70;
   line-height: 16px;
   margin: -8px;
   margin-top: 8px;
@@ -1516,23 +1521,23 @@ span.CodeMirror-selectedtext { background: none; }
 }
 
 .CodeMirror-info .type-name {
-  color: #CA9800;
+  color: #ca9800;
 }
 
 .CodeMirror-info .field-name {
-  color: #1F61A0;
+  color: #1f61a0;
 }
 
 .CodeMirror-info .enum-value {
-  color: #0B7FC7;
+  color: #0b7fc7;
 }
 
 .CodeMirror-info .arg-name {
-  color: #8B2BB9;
+  color: #8b2bb9;
 }
 
 .CodeMirror-info .directive-name {
-  color: #B33086;
+  color: #b33086;
 }
 .CodeMirror-jump-token {
   text-decoration: underline;
@@ -1561,7 +1566,8 @@ span.CodeMirror-selectedtext { background: none; }
   z-index: 100;
 }
 
-.CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning {
+.CodeMirror-lint-mark-error,
+.CodeMirror-lint-mark-warning {
   background-position: left bottom;
   background-repeat: repeat-x;
 }
@@ -1576,7 +1582,8 @@ span.CodeMirror-selectedtext { background: none; }
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sJFhQXEbhTg7YAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAMklEQVQI12NkgIIvJ3QXMjAwdDN+OaEbysDA4MPAwNDNwMCwiOHLCd1zX07o6kBVGQEAKBANtobskNMAAAAASUVORK5CYII=");
 }
 
-.CodeMirror-lint-marker-error, .CodeMirror-lint-marker-warning {
+.CodeMirror-lint-marker-error,
+.CodeMirror-lint-marker-warning {
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -1587,13 +1594,15 @@ span.CodeMirror-selectedtext { background: none; }
   width: 16px;
 }
 
-.CodeMirror-lint-message-error, .CodeMirror-lint-message-warning {
+.CodeMirror-lint-message-error,
+.CodeMirror-lint-message-warning {
   background-position: top left;
   background-repeat: no-repeat;
   padding-left: 18px;
 }
 
-.CodeMirror-lint-marker-error, .CodeMirror-lint-message-error {
+.CodeMirror-lint-marker-error,
+.CodeMirror-lint-message-error {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEW7AAC7AACxAAC7AAC7AAAAAAC4AAC5AAD///+7AAAUdclpAAAABnRSTlMXnORSiwCK0ZKSAAAATUlEQVR42mWPOQ7AQAgDuQLx/z8csYRmPRIFIwRGnosRrpamvkKi0FTIiMASR3hhKW+hAN6/tIWhu9PDWiTGNEkTtIOucA5Oyr9ckPgAWm0GPBog6v4AAAAASUVORK5CYII=");
 }
 
@@ -1694,7 +1703,7 @@ li.CodeMirror-hint-active {
   background: #fffae8;
   -webkit-box-shadow: inset 0 1px 1px -1px #bfb063;
   box-shadow: inset 0 1px 1px -1px #bfb063;
-  color: #867F70;
+  color: #867f70;
   font-family:
     system,
     -apple-system,

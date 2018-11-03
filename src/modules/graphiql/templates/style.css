@@ -24,10 +24,10 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+}
 
-  h1 {
-    text-align: center;
-  }
+.login-container h1 {
+  text-align: center;
 }
 
 #login {
