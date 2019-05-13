@@ -1,6 +1,6 @@
 #
 
-This is another component 😄
+This is a component 😄
 
 ```jsx
 <Helper />

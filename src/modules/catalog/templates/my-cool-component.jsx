@@ -1,7 +1,11 @@
 import React from 'react';
 
-import './my-cool-component.scss';
+import MyCoolComponentStyled from './my-cool-component.styled';
 
-const MyCoolComponent = () => <h1 className="main">Hello MyCoolComponent!!</h1>;
+const MyCoolComponent = () => (
+  <MyCoolComponentStyled>
+    Hello MyCoolComponent!!
+  </MyCoolComponentStyled>
+);
 
 export default MyCoolComponent;

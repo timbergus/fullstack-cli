@@ -6,14 +6,10 @@ module.exports = {
   rootDir: resolve(),
   testURL: 'http://localhost/',
   testRegex: '/*.test.js$',
-  globals: {
-    __DEVELOPMENT__: true,
-  },
-  /*--------*/
   collectCoverage: true,
-  coverageReporters: ['lcov'],
+  coverageReporters: ['lcov', 'text-summary'],
   coverageDirectory: '__tests__/coverage',
-  collectCoverageFrom: modules.map(module => `src/${module}/**/*.{js|jsx}`),
+  collectCoverageFrom: modules.map(module => `src/${module}/**/*.{js,jsx}`),
   coverageThreshold: {
     global: {
       branches: 0,

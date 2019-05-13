@@ -72,7 +72,7 @@
     "dependency": ""
   },
   {
-    "name": ".babelrc",
+    "name": "babel.config.js",
     "path": [],
     "template": false,
     "dependency": ""

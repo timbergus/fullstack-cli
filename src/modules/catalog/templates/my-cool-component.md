@@ -1,6 +1,6 @@
 #
 
-This is a component 😄
+This is another component 😄
 
 ```jsx
 <MyCoolComponent />

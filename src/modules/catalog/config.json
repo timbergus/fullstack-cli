@@ -29,6 +29,13 @@
     "template": false,
     "dependency": ""
   },
+
+  {
+    "name": ".gitkeep",
+    "path": ["src", "utils"],
+    "template": false,
+    "dependency": ""
+  },
   {
     "name": "my-cool-component.jsx",
     "path": ["src", "components", "my-cool-component"],
@@ -42,26 +49,26 @@
     "dependency": ""
   },
   {
-    "name": "my-cool-component.scss",
+    "name": "my-cool-component.styled.js",
     "path": ["src", "components", "my-cool-component"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "helper.jsx",
-    "path": ["src", "components", "my-cool-component", "helper"],
+    "path": ["src", "components", "helper"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "helper.md",
-    "path": ["src", "components", "my-cool-component", "helper"],
+    "path": ["src", "components", "helper"],
     "template": false,
     "dependency": ""
   },
   {
     "name": "helper.scss",
-    "path": ["src", "components", "my-cool-component", "helper"],
+    "path": ["src", "components", "helper"],
     "template": false,
     "dependency": ""
   }

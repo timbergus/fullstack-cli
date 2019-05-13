@@ -10,6 +10,7 @@ This project creates a library for React components. It is based on [Styleguidis
 * __test:watch ->__ This script serves only to create Jest's tests. It opens the Jest's watch mode and allow you to work with Jest's test tools.
 * __build ->__ This is the script to build the library distribution.
 * __build:styleguide ->__ This is the script to build the catalog distribution as web page.
+* __panic ->__ This script clean everything, installs modules and launches tests. When nothing works and you get desperate, this is your script!
 
 ## File and Folder Structure
 
@@ -18,20 +19,28 @@ This project creates a library for React components. It is based on [Styleguidis
   * __tests ->__ These folder contains the configuration files for Jest.
   * __modules.js ->__ These are the folder inside the __src__ folder that will be used to build the library, and that will be counted for the test coverage.
 * __src ->__ This folder contains all the source code for the library.
+  * __assets ->__ Contains all the project's assets and it is copied when built.
+  * __components ->__ Contains all the project's components.
+  * __utils ->__ Contains all the project's utils.
+  * __styles ->__ Contains all the project's common styles in Sass.
 
 The rest of the files out of this folders are configuration files for the development environment of the library. They are mostly self descriptive.
 
+## Libraries
+
+This project uses [Sass](https://sass-lang.com/) and [Styled Components](https://www.styled-components.com/), so you can use the example that you prefer.
+
 ## How to
 
-### Developing
+### Develop
 
 To develop a component library, we just need to run `npm start`. This will launch the component catalog at [localhost:3100](http://localhost:3100).
 
-### Building
+### Build
 
 To build the final package, we just need to execute `npm run build`. This build script will always pass all the test before building. If something fails, there will be no building process.
 
-### Publishing
+### Publish
 
 To publish the new library in [npm](https://www.npmjs.com/), execute `npm publish`. This scripts executes `prepublish` that builds the library. Test are passed too, so if there are errors, the package won't be build, neither published.
 
