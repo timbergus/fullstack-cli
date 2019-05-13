@@ -1,15 +1,5 @@
 // @flow
 
-import React, { Component } from 'react';
+import React from 'react';
 
-type Props = {};
-
-type State = {};
-
-export default class ProfileComponent extends Component<Props, State> {
-  render () {
-    return (
-      <h1>Profile component is working!</h1>
-    );
-  }
-}
+export default () => <h1>Profile component is working!</h1>;

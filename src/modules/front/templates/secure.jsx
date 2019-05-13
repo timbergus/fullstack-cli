@@ -6,24 +6,22 @@ import { Route, NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 {{/ material-ui }}
 
-import HomeComponent from 'components/home';
-import ProfileComponent from 'components/profile';
-import AboutComponent from 'components/about';
+import HomeComponent from './home';
+import ProfileComponent from './profile';
+import AboutComponent from './about';
 
 type Props = {
   history: Object
 };
 
-type State = {};
-
-export default class SecureComponent extends Component<Props, State> {
-
-  logout () {
+export default class SecureComponent extends Component<Props> {
+  logout = () => {
+    const { history } = this.props;
     Reflect.deleteProperty(localStorage, 'token');
-    this.props.history.push('/login');
+    history.push('/login');
   }
 
-  render () {
+  render() {
     return (
       <div>
         <nav>
@@ -34,6 +32,7 @@ export default class SecureComponent extends Component<Props, State> {
         {{# material-ui }}
         <Button
           variant="contained"
+          color="secondary"
           onClick={this.logout.bind(this)}
           className="home-button"
         >
@@ -41,11 +40,11 @@ export default class SecureComponent extends Component<Props, State> {
         </Button>
         {{/ material-ui }}
         {{^ material-ui }}
-        <button onClick={ this.logout.bind(this) }>Logout</button>
+        <button type="button" onClick={this.logout.bind(this)}>Logout</button>
         {{/ material-ui }}
-        <Route path="/secure/home" component={ HomeComponent } />
-        <Route path="/secure/profile" component={ ProfileComponent } />
-        <Route path="/secure/about" component={ AboutComponent } />
+        <Route path="/secure/home" component={HomeComponent} />
+        <Route path="/secure/profile" component={ProfileComponent} />
+        <Route path="/secure/about" component={AboutComponent} />
       </div>
     );
   }

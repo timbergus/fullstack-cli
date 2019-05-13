@@ -12,26 +12,27 @@ type Props = {
 type State = {};
 
 export default class LoginComponent extends Component<Props, State> {
-
-  login () {
+  login = () => {
+    const { history } = this.props;
     window.localStorage.token = '12345';
-    this.props.history.push('/');
+    history.push('/');
   }
 
-  render () {
+  render() {
     return (
       <div>
         <h1>Login</h1>
         {{# material-ui }}
         <Button
           variant="contained"
-          onClick={ this.login.bind(this) }
+          color="primary"
+          onClick={this.login.bind(this)}
         >
           Login
         </Button>
         {{/ material-ui }}
         {{^ material-ui }}
-        <button onClick={ this.login.bind(this) }>Login</button>
+        <button type="button" onClick={this.login.bind(this)}>Login</button>
         {{/ material-ui }}
       </div>
     );

@@ -1,4 +1,5 @@
 // @flow
+/* eslint-disable react/prefer-stateless-function */
 
 import React{{^routes}}, { Component }{{/routes}} from 'react';
 import { render } from 'react-dom';
@@ -14,6 +15,10 @@ import io from 'socket.io-client';
 
 import store from './store';
 {{/redux}}
+{{#routes}}
+
+import Routes from './routes';
+{{/routes}}
 {{#websockets}}
 
 const socket = io.connect('http://localhost:1337');
@@ -25,22 +30,14 @@ type Props = {
   socket: Object
 };
 
-type State = {};
 {{/routes}}
 {{/websockets}}
-{{#routes}}
-
-import Routes from './routes';
-{{/routes}}
 {{^routes}}
 
 type Props = {};
 
-type State = {};
-
-class App extends Component<Props, State> {
+class App extends Component<Props> {
 {{#websockets}}
-
   componentWillMount () {
     this.props.socket.on('alive', () => console.log('Connection is alive!'));
   }
@@ -50,7 +47,7 @@ class App extends Component<Props, State> {
   }
 
 {{/websockets}}
-  render () {
+  render() {
     return (
       <h1>Hello, World!</h1>
     );
@@ -60,11 +57,11 @@ class App extends Component<Props, State> {
 
 render(
   {{#redux}}
-  <Provider store={ store }>
+  <Provider store={store}>
   {{/redux}}
-  {{#redux}}  {{/redux}}<{{#routes}}Routes{{/routes}}{{^routes}}App{{/routes}}{{#websockets}} socket={ socket }{{/websockets}} />
+  {{#redux}}  {{/redux}}<{{#routes}}Routes{{/routes}}{{^routes}}App{{/routes}}{{#websockets}} socket={socket}{{/websockets}} />{{^redux}},{{/redux}}
   {{#redux}}
-  </Provider>
+  </Provider>,
   {{/redux}}
-  , window.document.getElementById('root')
+  window.document.getElementById('root'),
 );
