@@ -7,6 +7,8 @@
 [![codecov](https://codecov.io/gh/timbergus/fullstack-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/timbergus/fullstack-cli)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fdedb56c4f634970b8c78922310546a3)](https://app.codacy.com/app/timbergus/fullstack-cli?utm_source=github.com&utm_medium=referral&utm_content=timbergus/fullstack-cli&utm_campaign=Badge_Grade_Dashboard)
 
+> __WARNING:__ From v1.0.10, the GraphiQL project has been removed in favor of [GraphQL Playground](https://github.com/prisma/graphql-playground) tool from Prisma team. No need to reinvent the wheel.
+
 ## Introduction
 
 This is a tool for Fullstack Developers, to create the full stack for a web application. This stack contains:
@@ -95,12 +97,6 @@ The security is based in [JWT](https://jwt.io/) (using [hapi-auth-bearer-token](
 The project is based on plain Node.js (no transpilers), so we are still using CommonJS import method using `require` instead of `import`.
 
 To configure each database connection, there are configuration files inside the __config__ folder. The API will try to connect to your databases, so if you don't configure the connection properly, it will throw an error.
-
-## GraphiQL
-
-This is the [GraphiQL](https://github.com/graphql/graphiql) React component integrated into an application. The only options of the project are the needed for the `package.json`.
-
-Then, the packages are installed, and a few instructions appear to let you know how to start developing your new platform.
 
 ## Catalog
 

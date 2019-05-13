@@ -10,13 +10,11 @@ const { createElement } = require('../tools/core.tools');
 
 const front = require('../forms/front.form');
 const back = require('../forms/back.form');
-const graphiql = require('../forms/graphiql.form');
 const catalog = require('../forms/catalog.form');
 
 const forms = {
   front,
   back,
-  graphiql,
   catalog,
 };
 

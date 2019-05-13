@@ -1,6 +1,0 @@
-{
-  "endpoints": {
-    "login": "http://localhost:1337/login",
-    "graphql": "http://localhost:1337/graphql"
-  }
-}

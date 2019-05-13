@@ -5,8 +5,7 @@
         "package.json",
         "src/modules/back/common/templates/package.json",
         "src/modules/catalog/common/templates/package.json",
-        "src/modules/front/common/templates/package.json",
-        "src/modules/graphiql/common/templates/package.json"
+        "src/modules/front/common/templates/package.json"
       ]
     }
   }
