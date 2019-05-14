@@ -1,6 +1,6 @@
 /* globals test, expect */
 
-import reducer, { incrementCounter, decrementCounter } from 'reducers/counter';
+import reducer, { incrementCounter, decrementCounter } from '../../src/reducers/counter';
 
 test('incrementCounter counter must return action', () => {
   expect(JSON.stringify(incrementCounter())).toBe('{"type":"{{ name }}/counter/INCREMENT"}');

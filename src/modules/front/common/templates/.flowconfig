@@ -7,5 +7,21 @@
 [lints]
 
 [options]
+; Extensions
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.css
+module.file_ext=.scss
+; Needed for dynamic imports.
+module.ignore_non_literal_requires=true
+; To avoid errors with decorators.
+; https://stackoverflow.com/questions/45975255/flow-type-dismiss-warning-of-experimental-decorator-usage
+esproposal.decorators=ignore
+esproposal.optional_chaining=enable
 
 [strict]
+
+[untyped]
+; https://github.com/facebook/flow/issues/5568
+.*/node_modules/*.

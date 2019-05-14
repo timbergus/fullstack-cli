@@ -1,5 +1,31 @@
 [
   {
+    "name": "file.mock.js",
+    "path": ["config", "tests", "mocks"],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "mediaFileTransformer.js",
+    "path": ["config", "tests"],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "style.mock.js",
+    "path": ["config", "tests", "mocks"],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "test-setup.js",
+    "path": ["config", "tests"],
+    "template": false,
+    "dependencies": []
+  },
+
+
+  {
     "name": "babel.config.js",
     "path": [],
     "template": false,
@@ -55,10 +81,7 @@
   },
   {
     "name": "fragments.js",
-    "path": [
-      "config",
-      "webpack"
-    ],
+    "path": ["config", "webpack"],
     "template": false,
     "dependencies": []
   },

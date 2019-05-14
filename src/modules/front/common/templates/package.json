@@ -9,10 +9,11 @@
   "scripts": {
     "start": "webpack-dev-server --env.dev",
     "test": "npm run eslint && npm run stylelint && npm run flow && jest",
+    "test:jest": "jest --detectOpenHandles",
     "build": "npm test && webpack --env.prod",
     "docs": "esdoc -c esdoc.json",
     "eslint": "eslint src",
-    "stylelint": "stylelint src",
+    "stylelint": "stylelint \"src/**/*.css\"",
     "flow": "flow",
     "panic": "rimraf package-lock.json && rimraf node_modules && npm i"
   },

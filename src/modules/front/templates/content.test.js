@@ -1,10 +1,10 @@
 /* globals test, expect */
 
-import reducer from 'reducers/content';
+import reducer from '../../src/reducers/content';
 
 test('An action must return a message', () => {
 
-  let action = {
+  const action = {
     type: '{{ name }}/content/GET_CONTENT',
     data: {
       subtitle: 'Fake data'
