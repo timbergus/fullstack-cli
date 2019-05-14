@@ -2,11 +2,16 @@
 
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
-{{# material-ui }}
+{{! // If we choose Material UI we add the button. }}
+{{#material-ui}}
 import Button from '@material-ui/core/Button';
-{{/ material-ui }}
+{{/material-ui}}
 
 import HomeComponent from './home';
+{{! // If redux, then we add the counter page. }}
+{{#redux}}
+import CounterComponent from './counter';
+{{/redux}}
 import ProfileComponent from './profile';
 import AboutComponent from './about';
 
@@ -26,23 +31,29 @@ export default class SecureComponent extends Component<Props> {
       <div>
         <nav>
           <NavLink to="/secure/home" activeClassName="active">Home</NavLink>
+          {{#redux}}
+          <NavLink to="/secure/counter" activeClassName="active">Counter</NavLink>
+          {{/redux}}
           <NavLink to="/secure/profile" activeClassName="active">Profile</NavLink>
           <NavLink to="/secure/about" activeClassName="active">About</NavLink>
         </nav>
-        {{# material-ui }}
+        {{#material-ui}}
         <Button
           variant="contained"
           color="secondary"
-          onClick={this.logout.bind(this)}
+          onClick={this.logout}
           className="home-button"
         >
           Logout
         </Button>
-        {{/ material-ui }}
-        {{^ material-ui }}
-        <button type="button" onClick={this.logout.bind(this)}>Logout</button>
-        {{/ material-ui }}
+        {{/material-ui}}
+        {{^material-ui}}
+        <button type="button" onClick={this.logout}>Logout</button>
+        {{/material-ui}}
         <Route path="/secure/home" component={HomeComponent} />
+        {{#redux}}
+        <Route path="/secure/counter" component={CounterComponent} />
+        {{/redux}}
         <Route path="/secure/profile" component={ProfileComponent} />
         <Route path="/secure/about" component={AboutComponent} />
       </div>

@@ -2,4 +2,4 @@
 
 import React from 'react';
 
-export default () => <h1>About component is working!</h1>;
+export default () => <h1>About page is working!</h1>;

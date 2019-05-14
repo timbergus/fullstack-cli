@@ -3,96 +3,96 @@
     "name": "auth.js",
     "path": ["src"],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "graphql.js",
     "path": ["src", "handlers"],
     "template": false,
-    "dependency": "graphql"
+    "dependencies": ["graphql"]
   },
   {
     "name": "user-handlers.js",
     "path": ["src", "handlers"],
     "template": false,
-    "dependency": "graphql"
+    "dependencies": ["graphql"]
   },
   {
     "name": "headers.js",
     "path": ["src", "utils"],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "headers.test.js",
     "path": ["src", "utils"],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "index.js",
     "path": ["src"],
     "template": true,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "models.js",
     "path": ["src", "ddbb"],
     "template": false,
-    "dependency": "mongodb"
+    "dependencies": ["mongodb"]
   },
   {
     "name": "mongodb.js",
     "path": ["src", "ddbb"],
     "template": false,
-    "dependency": "mongodb"
+    "dependencies": ["mongodb"]
   },
   {
     "name": "mongodb.json",
     "path": ["src", "config"],
     "template": false,
-    "dependency": "mongodb"
+    "dependencies": ["mongodb"]
   },
   {
     "name": "mysql.js",
     "path": ["src", "ddbb"],
     "template": false,
-    "dependency": "mysql"
+    "dependencies": ["mysql"]
   },
   {
     "name": "mysql.json",
     "path": ["src", "config"],
     "template": false,
-    "dependency": "mysql"
+    "dependencies": ["mysql"]
   },
   {
     "name": "postgresql.js",
     "path": ["src", "ddbb"],
     "template": false,
-    "dependency": "postgresql"
+    "dependencies": ["postgresql"]
   },
   {
     "name": "postgresql.json",
     "path": ["src", "config"],
     "template": false,
-    "dependency": "postgresql"
+    "dependencies": ["postgresql"]
   },
   {
     "name": "routes.js",
     "path": ["src"],
     "template": true,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "sockets.js",
     "path": ["src"],
     "template": false,
-    "dependency": "websockets"
+    "dependencies": ["websockets"]
   },
   {
     "name": "token.js",
     "path": ["src", "handlers"],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   }
 ]

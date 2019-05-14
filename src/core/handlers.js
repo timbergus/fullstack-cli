@@ -57,7 +57,22 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
 
       /* eslint-disable-next-line global-require, import/no-dynamic-require */
       require(`../modules/${type}/config.json`).forEach((file) => {
-        if (!file.dependency || opt[file.dependency]) {
+        // A project file will be copied under three circumstances:
+        //
+        // * There is no dependency.
+        // * The dependency is an option from the form.
+        // * The dependency negated (^) is not an option.
+
+        const hasDependency = file.dependencies.map((dep) => {
+          if (dep.includes('^')) {
+            return Boolean(opt[dep.replace('^', '')] === false);
+          }
+          return Boolean(opt[dep]);
+        });
+
+        const mustBe = hasDependency.reduce((sum, next) => sum && next, true);
+
+        if (Boolean(file.dependencies) === false || mustBe) {
           createElement(opt, file, ['modules', type, 'templates'], type);
         }
       });
@@ -95,5 +110,8 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
         'To test the project => npm test',
       ]);
     })
-    .catch(() => reject(new Error('Cannot create project!')));
+    .catch((error) => {
+      console.log(error);
+      reject(new Error('Cannot create project!'));
+    });
 });

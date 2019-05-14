@@ -1,57 +1,57 @@
 [
   {
-    "name": ".babelrc",
+    "name": "babel.config.js",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": ".env",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": ".editorconfig",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": ".eslintignore",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": ".eslintrc",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "stylelint.config.js",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "esdoc.json",
     "path": [],
     "template": true,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "favicon.png",
     "path": ["src", "assets", "icons"],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": ".gitkeep",
     "path": ["src", "assets", "images"],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "fragments.js",
@@ -60,54 +60,54 @@
       "webpack"
     ],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": ".flowconfig",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "jest.config.js",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "index.html",
     "path": ["src"],
     "template": true,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "gitignore",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "package.json",
     "path": [],
     "template": true,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "postcss.config.js",
     "path": [],
     "template": false,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "README.md",
     "path": [],
     "template": true,
-    "dependency": ""
+    "dependencies": []
   },
   {
     "name": "webpack.config.js",
     "path": [],
     "template": true,
-    "dependency": ""
+    "dependencies": []
   }
 ]

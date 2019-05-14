@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 {{# material-ui }}
+
 import Button from '@material-ui/core/Button';
 {{/ material-ui }}
 
@@ -9,9 +10,7 @@ type Props = {
   history: Object
 };
 
-type State = {};
-
-export default class LoginComponent extends Component<Props, State> {
+export default class LoginComponent extends Component<Props> {
   login = () => {
     const { history } = this.props;
     window.localStorage.token = '12345';
@@ -26,13 +25,13 @@ export default class LoginComponent extends Component<Props, State> {
         <Button
           variant="contained"
           color="primary"
-          onClick={this.login.bind(this)}
+          onClick={this.login}
         >
           Login
         </Button>
         {{/ material-ui }}
         {{^ material-ui }}
-        <button type="button" onClick={this.login.bind(this)}>Login</button>
+        <button type="button" onClick={this.login}>Login</button>
         {{/ material-ui }}
       </div>
     );
