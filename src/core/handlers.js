@@ -110,8 +110,5 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
         'To test the project => npm test',
       ]);
     })
-    .catch((error) => {
-      console.log(error);
-      reject(new Error('Cannot create project!'));
-    });
+    .catch(() => reject(new Error('Cannot create project!')));
 });
