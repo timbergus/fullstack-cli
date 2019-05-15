@@ -12,6 +12,9 @@ import HomeComponent from './home';
 {{#redux}}
 import CounterComponent from './counter';
 {{/redux}}
+{{#apollo}}
+import CounterGQLComponent from './counter.gql';
+{{/apollo}}
 import ProfileComponent from './profile';
 import AboutComponent from './about';
 
@@ -34,6 +37,9 @@ export default class SecureComponent extends Component<Props> {
           {{#redux}}
           <NavLink to="/secure/counter" activeClassName="active">Counter</NavLink>
           {{/redux}}
+          {{#apollo}}
+          <NavLink to="/secure/counter-gql" activeClassName="active">Counter GQL</NavLink>
+          {{/apollo}}
           <NavLink to="/secure/profile" activeClassName="active">Profile</NavLink>
           <NavLink to="/secure/about" activeClassName="active">About</NavLink>
         </nav>
@@ -54,6 +60,9 @@ export default class SecureComponent extends Component<Props> {
         {{#redux}}
         <Route path="/secure/counter" component={CounterComponent} />
         {{/redux}}
+        {{#apollo}}
+        <Route path="/secure/counter-gql" component={CounterGQLComponent} />
+        {{/apollo}}
         <Route path="/secure/profile" component={ProfileComponent} />
         <Route path="/secure/about" component={AboutComponent} />
       </div>

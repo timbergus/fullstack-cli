@@ -7,8 +7,6 @@
 [![codecov](https://codecov.io/gh/timbergus/fullstack-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/timbergus/fullstack-cli)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fdedb56c4f634970b8c78922310546a3)](https://app.codacy.com/app/timbergus/fullstack-cli?utm_source=github.com&utm_medium=referral&utm_content=timbergus/fullstack-cli&utm_campaign=Badge_Grade_Dashboard)
 
-> __WARNING:__ From v1.0.10, the GraphiQL project has been removed in favor of [GraphQL Playground](https://github.com/prisma/graphql-playground) tool from Prisma team. No need to reinvent the wheel.
-
 ## Introduction
 
 This is a tool for Fullstack Developers, to create the full stack for a web application. This stack contains:

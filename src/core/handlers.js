@@ -23,6 +23,10 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
     .then((options) => {
       const opt = { ...options };
 
+      if (opt['state-manager']) {
+        opt[options['state-manager']] = true;
+      }
+
       if ('ddbb' in opt) {
         opt.ddbb.forEach(db => Object.assign(opt, {
           [db.name]: db.value,

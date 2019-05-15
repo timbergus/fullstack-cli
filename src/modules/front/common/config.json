@@ -82,7 +82,7 @@
   {
     "name": "fragments.js",
     "path": ["config", "webpack"],
-    "template": false,
+    "template": true,
     "dependencies": []
   },
   {

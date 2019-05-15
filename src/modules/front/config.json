@@ -1,5 +1,23 @@
 [
   {
+    "name": "client.js",
+    "path": ["src", "apollo"],
+    "template": false,
+    "dependencies": ["apollo"]
+  },
+  {
+    "name": "queries.js",
+    "path": ["src", "apollo"],
+    "template": true,
+    "dependencies": ["apollo"]
+  },
+  {
+    "name": "schema.graphql",
+    "path": ["src", "apollo"],
+    "template": true,
+    "dependencies": ["apollo"]
+  },
+  {
     "name": "content.js",
     "path": ["src", "reducers"],
     "template": true,
@@ -76,6 +94,12 @@
     "path": ["src", "components"],
     "template": true,
     "dependencies": ["redux"]
+  },
+  {
+    "name": "counter.gql.jsx",
+    "path": ["src", "components"],
+    "template": true,
+    "dependencies": ["apollo"]
   },
   {
     "name": "profile.jsx",

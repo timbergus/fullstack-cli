@@ -20,10 +20,27 @@ module.exports = [
     default: true,
   },
   {
-    type: 'confirm',
-    name: 'redux',
-    message: 'redux:',
-    default: true,
+    type: 'list',
+    name: 'state-manager',
+    message: 'State Manager',
+    choices: [
+      {
+        name: 'none',
+        message: 'none',
+        value: false,
+      },
+      {
+        name: 'redux',
+        message: 'redux',
+        value: 'redux',
+      },
+      {
+        name: 'apollo',
+        message: 'apollo',
+        value: 'apollo',
+      },
+    ],
+    initial: 1,
   },
   {
     type: 'confirm',

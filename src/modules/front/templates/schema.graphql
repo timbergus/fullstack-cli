@@ -1,0 +1,7 @@
+type Counter {
+  value: Int!
+}
+
+type Mutation {
+  modifyCounter(amount: Int!): Int!
+}
