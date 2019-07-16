@@ -66,15 +66,15 @@ const goodOptions = {
 
 const hapiSwaggerOptions = {
   info: {
-    'title': '{{ name }} API Documentation',
-    'description': '{{ description }}',
-    'version': version,
-    'contact': {
-      'name': '{{ author }}',
-      'email': '{{ email }}'
+    title: '{{ name }} API Documentation',
+    description: '{{ description }}',
+    version: version,
+    contact: {
+      name: '{{ author }}',
+      email: '{{ email }}'
     }
   },
-  'host': 'localhost:1337'
+  host: 'localhost:1337'
 };
 
 // Then we register the plugins and launch the server.
