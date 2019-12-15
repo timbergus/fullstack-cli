@@ -5,7 +5,7 @@ module.exports = [
     type: 'input',
     name: 'name',
     message: 'name:',
-    validate: name => validateProjectName(name),
+    validate: (name) => validateProjectName(name),
   },
   {
     type: 'checkbox',
@@ -47,7 +47,7 @@ module.exports = [
     type: 'confirm',
     name: 'graphql',
     message: 'graphql:',
-    when: answers => answers.ddbb.find(db => db.name === 'mongodb'),
+    when: (answers) => answers.ddbb.find((db) => db.name === 'mongodb'),
   },
   {
     type: 'input',

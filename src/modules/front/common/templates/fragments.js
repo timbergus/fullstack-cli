@@ -10,7 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports.setMode = (mode = 'development') => ({ mode });
 
-module.exports.setEntry = app => ({
+module.exports.setEntry = (app) => ({
   entry: { app },
 });
 
@@ -18,7 +18,7 @@ module.exports.setSourcemapMode = (mode = 'development') => ({
   devtool: mode === 'production' ? 'source-map' : 'eval',
 });
 
-module.exports.setOutput = path => {
+module.exports.setOutput = (path) => {
   const plugin = new HtmlWebpackPlugin({
     template: resolve('src', 'index.html'),
   });
@@ -39,6 +39,7 @@ module.exports.devServer = ({ host, port } = {}) => ({
     host, // Defaults to "localhost"
     port, // Defaults to 8080
     overlay: true,
+    open: true,
   },
 });
 
@@ -86,7 +87,6 @@ module.exports.loadCSS = ({ include, exclude } = {}) => ({
 });
 
 module.exports.extractCSS = ({ include, exclude, use } = {}) => {
-
   const plugin = new ExtractTextPlugin({
     allChunks: true,
     filename: '[name].[chunkhash].css',
@@ -119,7 +119,7 @@ module.exports.loadImages = ({ include, exclude, options } = {}) => ({
           loader: 'image-trace-loader',
           options: {
             color: '#cccccc',
-          }
+          },
         },
         {
           loader: 'url-loader',
@@ -139,7 +139,7 @@ module.exports.notify = () => ({
   ],
 });
 
-module.exports.purifyCSS = paths => {
+module.exports.purifyCSS = (paths) => {
   const plugin = new PurifyCSSPlugin({ paths });
   return {
     plugins: [plugin],

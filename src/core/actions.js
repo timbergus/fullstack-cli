@@ -7,24 +7,24 @@ const { actionHandler } = require('./handlers');
  * @param  {String} command The project type selected by the user
  */
 
-module.exports.checkArgs = command => new Promise((resolve, reject) => {
+module.exports.checkArgs = (command) => new Promise((resolve, reject) => {
   switch (command) {
     case 'front':
       actionHandler('front').then(
-        response => resolve(response),
-        error => reject(error),
+        (response) => resolve(response),
+        (error) => reject(error),
       );
       break;
     case 'back':
       actionHandler('back').then(
-        response => resolve(response),
-        error => reject(error),
+        (response) => resolve(response),
+        (error) => reject(error),
       );
       break;
     case 'catalog':
       actionHandler('catalog').then(
-        response => resolve(response),
-        error => reject(error),
+        (response) => resolve(response),
+        (error) => reject(error),
       );
       break;
     default:

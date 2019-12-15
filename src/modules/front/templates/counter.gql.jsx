@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Query, Mutation } from 'react-apollo';
 {{# material-ui }}
 
@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import { GET_COUNTER, MODIFY_COUNTER } from '../apollo/queries';
 
 export default () => (
-  <Fragment>
+  <>
     <h1>Welcome to the counter!</h1>
     <Query query={GET_COUNTER}>
       {
@@ -19,9 +19,9 @@ export default () => (
     </Query>
     <Mutation mutation={MODIFY_COUNTER}>
       {
-        modifyCounter => (
+        (modifyCounter) => (
           {{#material-ui}}
-          <Fragment>
+          <>
             <Button
               variant="contained"
               color="primary"
@@ -44,10 +44,10 @@ export default () => (
             >
               Decrement
             </Button>
-          </Fragment>
+          </>
           {{/material-ui}}
           {{^material-ui}}
-          <Fragment>
+          <>
             <button
               type="button"
               onClick={() => modifyCounter({
@@ -68,10 +68,10 @@ export default () => (
             >
               Decrement
             </button>
-          </Fragment>
+          </>
           {{/material-ui}}
         )
       }
     </Mutation>
-  </Fragment>
+  </>
 );

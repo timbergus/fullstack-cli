@@ -3,14 +3,14 @@ module.exports = {
     'block-no-empty': null,
     'color-no-invalid-hex': true,
     'comment-empty-line-before': ['always', {
-      ignore: ['stylelint-commands', 'after-comment']
+      ignore: ['stylelint-commands', 'after-comment'],
     }],
     'declaration-colon-space-after': 'always',
     indentation: 2,
     'max-empty-lines': 2,
     'rule-empty-line-before': ['always', {
       except: ['first-nested'],
-      ignore: ['after-comment']
+      ignore: ['after-comment'],
     }],
     'string-quotes': 'single',
     'no-extra-semicolons': true,
@@ -23,6 +23,6 @@ module.exports = {
     'length-zero-no-unit': true,
     'max-nesting-depth': 2,
     'unit-case': 'lower',
-    'unit-no-unknown': true
-  }
+    'unit-no-unknown': true,
+  },
 };

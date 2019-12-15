@@ -30,7 +30,7 @@ export default class Routes extends Component<Props> {
           <Route
             exact
             path="/login"
-            render={props => (this.isLogged()
+            render={(props) => (this.isLogged()
               ? this.admit()
               : <LoginComponent {...props} />
             )}
@@ -45,7 +45,7 @@ export default class Routes extends Component<Props> {
           />
           <Route
             path="/secure"
-            render={props => (this.isLogged()
+            render={(props) => (this.isLogged()
               ? <SecureComponent {...props} />
               : this.expel()
             )}

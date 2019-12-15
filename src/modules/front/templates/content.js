@@ -13,7 +13,7 @@ export function getContent() {
 export default function reducer(state: Object = { subtitle: '' }, action: Object = {}) {
   switch (action.type) {
     case GET_CONTENT:
-      return Object.assign({}, action.data);
+      return { ...action.data };
     default:
       return state;
   }

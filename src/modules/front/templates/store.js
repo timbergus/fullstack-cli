@@ -18,7 +18,7 @@ const store = createStore(reducer, compose(
   applyMiddleware(...middleware),
   typeof window === 'object' && typeof window.devToolsExtension !== 'undefined'
     ? window.devToolsExtension()
-    : f => f,
+    : (f) => f,
 ));
 
 export default store;

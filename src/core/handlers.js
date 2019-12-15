@@ -18,7 +18,7 @@ const forms = {
   catalog,
 };
 
-module.exports.actionHandler = type => new Promise((resolve, reject) => {
+module.exports.actionHandler = (type) => new Promise((resolve, reject) => {
   inquirer.prompt(forms[type])
     .then((options) => {
       const opt = { ...options };
@@ -28,7 +28,7 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
       }
 
       if ('ddbb' in opt) {
-        opt.ddbb.forEach(db => Object.assign(opt, {
+        opt.ddbb.forEach((db) => Object.assign(opt, {
           [db.name]: db.value,
         }));
         delete opt.ddbb;
@@ -47,6 +47,7 @@ module.exports.actionHandler = type => new Promise((resolve, reject) => {
       // Then we create the common files (no dependencies).
 
       log();
+
       /* eslint-disable-next-line global-require, import/no-dynamic-require */
       require(`../modules/${type}/common/config.json`).forEach((file) => {
         createElement(opt, file, ['modules', type, 'common', 'templates']);

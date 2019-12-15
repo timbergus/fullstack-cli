@@ -21,9 +21,9 @@ const {
   {{#apollo}}
   loadGraphQl,
   {{/apollo}}
-} = require ('./config/webpack/fragments');
+} = require('./config/webpack/fragments');
 
-module.exports = env => merge([
+module.exports = (env) => merge([
   env.dev && setMode('development'),
   env.prod && setMode('production'),
   setEntry(resolve('src', 'index.jsx')),
@@ -31,7 +31,7 @@ module.exports = env => merge([
   env.dev && setSourcemapMode('development'),
   env.prod && setSourcemapMode('production'),
   env.dev && devServer({
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 3000,
   }),
   loadJSX({

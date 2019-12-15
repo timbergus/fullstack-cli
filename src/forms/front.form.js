@@ -5,7 +5,7 @@ module.exports = [
     type: 'input',
     name: 'name',
     message: 'name:',
-    validate: name => validateProjectName(name),
+    validate: (name) => validateProjectName(name),
   },
   {
     type: 'confirm',
