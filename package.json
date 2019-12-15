@@ -48,7 +48,7 @@
     "mustache": "^3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "replace-in-file": "^4.1.1",
+    "replace-in-file": "^5.0.2",
     "rimraf": "^3.0.0",
     "uppercamelcase": "^3.0.0"
   },
