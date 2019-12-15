@@ -32,15 +32,11 @@ module.exports.createElement = (options, file, path) => {
   const destination = resolve(to, fixHiddenFiles(file.name));
 
   if (file.template) {
-    try {
-      writeFileSync(destination, parseTemplate(from, options), (writeError) => {
-        if (writeError) {
-          log(`Cannot create "${file.name}"!`, 'error');
-        }
-      });
-    } catch (error) {
-      throw error;
-    }
+    writeFileSync(destination, parseTemplate(from, options), (writeError) => {
+      if (writeError) {
+        log(`Cannot create "${file.name}"!`, 'error');
+      }
+    });
   } else {
     copySync(from, destination);
   }

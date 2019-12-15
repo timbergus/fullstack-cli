@@ -41,6 +41,8 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.7.2",
     "fs-extra": "^8.1.0",
     "inquirer": "^7.0.1",
@@ -58,8 +60,6 @@
     "codecov": "^3.6.1",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-flowtype": "^4.5.2",
     "eslint-plugin-import": "^2.19.1",

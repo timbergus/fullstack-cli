@@ -1,7 +1,7 @@
 const { existsSync } = require('fs');
 const { readFile, parseTemplate, createElement } = require('../../src/tools/core.tools');
 
-test('parseTemplate must return a proper content.', () => {
+test('parseTemplate must return a formatted string.', () => {
   const options = {
     element: 'template',
   };
@@ -9,7 +9,7 @@ test('parseTemplate must return a proper content.', () => {
   expect(response).toBe('This is a template.\n');
 });
 
-test('parseTemplate must return a proper content.', () => {
+test('parseTemplate must return an empty string.', () => {
   const options = {
     element: 'template',
   };

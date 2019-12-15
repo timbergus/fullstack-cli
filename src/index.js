@@ -15,12 +15,12 @@ inquirer.prompt(indexForm)
       .then((response) => {
         if (Array.isArray(response)) {
           log();
-          response.forEach(line => log(line, 'info'));
+          response.forEach((line) => log(line, 'info'));
         } else {
           log();
           log(response, 'info');
         }
       })
-      .catch(error => log(error, 'error'));
+      .catch((error) => log(error, 'error'));
   })
-  .catch(error => log(error, 'error'));
+  .catch((error) => log(error, 'error'));
