@@ -26,6 +26,7 @@ module.exports.actionHandler = (type) => new Promise((resolve, reject) => {
       if (opt['state-manager']) {
         opt[options['state-manager']] = true;
       } else {
+        // We need to set this to false to copy App.tsx.
         opt.redux = false;
         opt.apollo = false;
       }
