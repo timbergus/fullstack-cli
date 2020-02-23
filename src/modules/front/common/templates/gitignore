@@ -1,9 +1,8 @@
 /node_modules/
-/__reports__/
+/__tests__/coverage/
 /.vscode/
-/docs/
+/.docz/
 /dist/
-stats.json
 *.DS_Store
 *.log
 *.xml

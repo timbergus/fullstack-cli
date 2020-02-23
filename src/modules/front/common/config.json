@@ -1,44 +1,12 @@
 [
   {
-    "name": "file.mock.js",
-    "path": ["config", "tests", "mocks"],
-    "template": false,
-    "dependencies": []
-  },
-  {
-    "name": "mediaFileTransformer.js",
-    "path": ["config", "tests"],
-    "template": false,
-    "dependencies": []
-  },
-  {
-    "name": "style.mock.js",
-    "path": ["config", "tests", "mocks"],
-    "template": false,
-    "dependencies": []
-  },
-  {
-    "name": "test-setup.js",
-    "path": ["config", "tests"],
-    "template": false,
-    "dependencies": []
-  },
-
-
-  {
-    "name": "babel.config.js",
+    "name": ".editorconfig",
     "path": [],
     "template": false,
     "dependencies": []
   },
   {
     "name": ".env",
-    "path": [],
-    "template": false,
-    "dependencies": []
-  },
-  {
-    "name": ".editorconfig",
     "path": [],
     "template": false,
     "dependencies": []
@@ -56,39 +24,68 @@
     "dependencies": []
   },
   {
-    "name": "stylelint.config.js",
+    "name": ".flowconfig",
     "path": [],
-    "template": false,
-    "dependencies": []
-  },
-  {
-    "name": "esdoc.json",
-    "path": [],
-    "template": true,
-    "dependencies": []
-  },
-  {
-    "name": "favicon.png",
-    "path": ["src", "assets", "icons"],
     "template": false,
     "dependencies": []
   },
   {
     "name": ".gitkeep",
-    "path": ["src", "assets", "images"],
+    "path": [
+      "src",
+      "assets",
+      "images"
+    ],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "babel.config.js",
+    "path": [],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "favicon.png",
+    "path": [
+      "src",
+      "assets",
+      "icons"
+    ],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "file.mock.js",
+    "path": [
+      "config",
+      "tests",
+      "mocks"
+    ],
     "template": false,
     "dependencies": []
   },
   {
     "name": "fragments.js",
-    "path": ["config", "webpack"],
+    "path": [
+      "config",
+      "webpack"
+    ],
     "template": true,
     "dependencies": []
   },
   {
-    "name": ".flowconfig",
+    "name": "gitignore",
     "path": [],
     "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "index.html",
+    "path": [
+      "src"
+    ],
+    "template": true,
     "dependencies": []
   },
   {
@@ -98,14 +95,11 @@
     "dependencies": []
   },
   {
-    "name": "index.html",
-    "path": ["src"],
-    "template": true,
-    "dependencies": []
-  },
-  {
-    "name": "gitignore",
-    "path": [],
+    "name": "mediaFileTransformer.js",
+    "path": [
+      "config",
+      "tests"
+    ],
     "template": false,
     "dependencies": []
   },
@@ -125,6 +119,31 @@
     "name": "README.md",
     "path": [],
     "template": true,
+    "dependencies": []
+  },
+  {
+    "name": "style.mock.js",
+    "path": [
+      "config",
+      "tests",
+      "mocks"
+    ],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "stylelint.config.js",
+    "path": [],
+    "template": false,
+    "dependencies": []
+  },
+  {
+    "name": "test-setup.js",
+    "path": [
+      "config",
+      "tests"
+    ],
+    "template": false,
     "dependencies": []
   },
   {

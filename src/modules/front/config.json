@@ -1,122 +1,294 @@
 [
   {
-    "name": "client.js",
-    "path": ["src", "apollo"],
+    "name": "about.jsx",
+    "path": [
+      "src",
+      "components"
+    ],
     "template": false,
-    "dependencies": ["apollo"]
+    "dependencies": [
+      "routes"
+    ]
   },
   {
-    "name": "queries.js",
-    "path": ["src", "apollo"],
-    "template": true,
-    "dependencies": ["apollo"]
-  },
-  {
-    "name": "schema.graphql",
-    "path": ["src", "apollo"],
-    "template": true,
-    "dependencies": ["apollo"]
-  },
-  {
-    "name": "content.js",
-    "path": ["src", "reducers"],
-    "template": true,
-    "dependencies": ["redux"]
-  },
-  {
-    "name": "mock.test.js",
-    "path": ["__tests__"],
-    "template": true,
-    "dependencies": []
-  },
-  {
-    "name": "content.test.js",
-    "path": ["__tests__", "reducers"],
-    "template": true,
-    "dependencies": ["redux"]
-  },
-  {
-    "name": "counter.js",
-    "path": ["src", "reducers"],
-    "template": true,
-    "dependencies": ["redux"]
-  },
-  {
-    "name": "counter.test.js",
-    "path": ["__tests__", "reducers"],
-    "template": true,
-    "dependencies": ["redux"]
-  },
-  {
-    "name": "index.jsx",
-    "path": ["src"],
-    "template": true,
-    "dependencies": []
-  },
-  {
-    "name": "store.js",
-    "path": ["src"],
+    "name": "about.mdx",
+    "path": [
+      "src",
+      "components"
+    ],
     "template": false,
-    "dependencies": ["redux"]
+    "dependencies": [
+      "routes"
+    ]
   },
   {
     "name": "app.jsx",
-    "path": ["src", "components"],
-    "template": true,
-    "dependencies": ["^routes", "^redux"]
-  },
-  {
-    "name": "routes.jsx",
-    "path": ["src"],
+    "path": [
+      "src",
+      "components"
+    ],
     "template": false,
-    "dependencies": ["routes"]
+    "dependencies": [
+      "^routes",
+      "^redux",
+      "^apollo"
+    ]
   },
   {
-    "name": "login.jsx",
-    "path": ["src", "components"],
-    "template": true,
-    "dependencies": ["routes"]
+    "name": "app.mdx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": false,
+    "dependencies": [
+      "^routes",
+      "^redux",
+      "^apollo"
+    ]
   },
   {
-    "name": "secure.jsx",
-    "path": ["src", "components"],
-    "template": true,
-    "dependencies": ["routes"]
+    "name": "client.js",
+    "path": [
+      "src",
+      "apollo"
+    ],
+    "template": false,
+    "dependencies": [
+      "apollo"
+    ]
   },
   {
-    "name": "home.jsx",
-    "path": ["src", "components"],
+    "name": "content.js",
+    "path": [
+      "src",
+      "reducers"
+    ],
     "template": true,
-    "dependencies": ["routes"]
+    "dependencies": [
+      "redux"
+    ]
   },
   {
-    "name": "counter.jsx",
-    "path": ["src", "components"],
+    "name": "content.test.js",
+    "path": [
+      "__tests__",
+      "reducers"
+    ],
     "template": true,
-    "dependencies": ["redux"]
+    "dependencies": [
+      "redux"
+    ]
   },
   {
     "name": "counter.gql.jsx",
-    "path": ["src", "components"],
+    "path": [
+      "src",
+      "components"
+    ],
     "template": true,
-    "dependencies": ["apollo"]
+    "dependencies": [
+      "apollo"
+    ]
+  },
+  {
+    "name": "counter.gql.mdx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": false,
+    "dependencies": [
+      "apollo"
+    ]
+  },
+  {
+    "name": "counter.js",
+    "path": [
+      "src",
+      "reducers"
+    ],
+    "template": true,
+    "dependencies": [
+      "redux"
+    ]
+  },
+  {
+    "name": "counter.jsx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": true,
+    "dependencies": [
+      "redux"
+    ]
+  },
+  {
+    "name": "counter.mdx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": false,
+    "dependencies": [
+      "redux"
+    ]
+  },
+  {
+    "name": "counter.test.js",
+    "path": [
+      "__tests__",
+      "reducers"
+    ],
+    "template": true,
+    "dependencies": [
+      "redux"
+    ]
+  },
+  {
+    "name": "home.jsx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": false,
+    "dependencies": [
+      "routes"
+    ]
+  },
+  {
+    "name": "home.mdx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": false,
+    "dependencies": [
+      "routes"
+    ]
+  },
+  {
+    "name": "index.jsx",
+    "path": [
+      "src"
+    ],
+    "template": true,
+    "dependencies": []
+  },
+  {
+    "name": "login.jsx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": true,
+    "dependencies": [
+      "routes"
+    ]
+  },
+  {
+    "name": "login.mdx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": false,
+    "dependencies": [
+      "routes"
+    ]
+  },
+  {
+    "name": "mock.test.js",
+    "path": [
+      "__tests__"
+    ],
+    "template": false,
+    "dependencies": []
   },
   {
     "name": "profile.jsx",
-    "path": ["src", "components"],
+    "path": [
+      "src",
+      "components"
+    ],
     "template": false,
-    "dependencies": ["routes"]
+    "dependencies": [
+      "routes"
+    ]
   },
   {
-    "name": "about.jsx",
-    "path": ["src", "components"],
+    "name": "profile.mdx",
+    "path": [
+      "src",
+      "components"
+    ],
     "template": false,
-    "dependencies": ["routes"]
+    "dependencies": [
+      "routes"
+    ]
+  },
+  {
+    "name": "queries.js",
+    "path": [
+      "src",
+      "apollo"
+    ],
+    "template": false,
+    "dependencies": [
+      "apollo"
+    ]
+  },
+  {
+    "name": "routes.jsx",
+    "path": [
+      "src"
+    ],
+    "template": false,
+    "dependencies": [
+      "routes"
+    ]
+  },
+  {
+    "name": "schema.graphql",
+    "path": [
+      "src",
+      "apollo"
+    ],
+    "template": false,
+    "dependencies": [
+      "apollo"
+    ]
+  },
+  {
+    "name": "secure.jsx",
+    "path": [
+      "src",
+      "components"
+    ],
+    "template": true,
+    "dependencies": [
+      "routes"
+    ]
+  },
+  {
+    "name": "store.js",
+    "path": [
+      "src"
+    ],
+    "template": false,
+    "dependencies": [
+      "redux"
+    ]
   },
   {
     "name": "style.css",
-    "path": ["src"],
+    "path": [
+      "src"
+    ],
     "template": false,
-    "dependencies": ["routes"]
+    "dependencies": [
+      "routes"
+    ]
   }
 ]

@@ -1,32 +1,32 @@
 const { resolve } = require('path');
 
-const PurifyCSSPlugin = require('purifycss-webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const SystemBellPlugin = require('system-bell-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports.setMode = (mode = 'development') => ({ mode });
-
-module.exports.setEntry = (app) => ({
-  entry: { app },
-});
 
 module.exports.setSourcemapMode = (mode = 'development') => ({
   devtool: mode === 'production' ? 'source-map' : 'eval',
 });
 
-module.exports.setOutput = (path) => {
+module.exports.setEntry = () => ({
+  entry: ["@babel/polyfill", resolve('src', 'index.jsx')],
+});
+
+module.exports.setOutput = () => {
   const plugin = new HtmlWebpackPlugin({
     template: resolve('src', 'index.html'),
+    favicon: resolve('src', 'assets', 'icons', 'favicon.png'),
   });
 
   return {
     output: {
-      path,
-      filename: '[name].[chunkhash].js',
+      path: resolve('dist'),
+      filename: '[name].[hash].js',
     },
     plugins: [plugin],
   };
@@ -35,20 +35,22 @@ module.exports.setOutput = (path) => {
 module.exports.devServer = ({ host, port } = {}) => ({
   devServer: {
     contentBase: resolve('src', 'assets'),
+    host, // Default to "localhost"
+    port, // Default to 8080
     compress: true,
-    host, // Defaults to "localhost"
-    port, // Defaults to 8080
     overlay: true,
     open: true,
+    inline: true,
+    hot: true,
   },
 });
 
-module.exports.loadJSX = ({ include, exclude } = {}) => ({
+module.exports.loadJSX = () => ({
   module: {
     rules: [{
       test: /\.jsx?$/,
-      include,
-      exclude,
+      include: resolve('src'),
+      exclude: /node_modules/,
       use: ['babel-loader'],
     }],
   },
@@ -60,6 +62,7 @@ module.exports.loadGraphQl = () => ({
     rules: [
       {
         test: /\.graphql$/,
+        include: resolve('src'),
         exclude: /node_modules/,
         use: 'graphql-import-loader',
       },
@@ -71,12 +74,12 @@ module.exports.loadGraphQl = () => ({
 // To use PostCSS we need to add the "postcss-loader" and a configuration file
 // called "postcss.config.js" with the plugins we are going to use.
 
-module.exports.loadCSS = ({ include, exclude } = {}) => ({
+module.exports.loadCSS = () => ({
   module: {
     rules: [{
       test: /\.css$/,
-      include,
-      exclude,
+      include: resolve('src'),
+      exclude: /node_modules/,
       use: [
         'style-loader',
         'css-loader',
@@ -86,34 +89,32 @@ module.exports.loadCSS = ({ include, exclude } = {}) => ({
   },
 });
 
-module.exports.extractCSS = ({ include, exclude, use } = {}) => {
-  const plugin = new ExtractTextPlugin({
-    allChunks: true,
-    filename: '[name].[chunkhash].css',
-  });
+module.exports.extractCSS = () => {
+  const plugin = new MiniCssExtractPlugin();
 
   return {
     module: {
       rules: [{
         test: /\.css$/,
-        include,
-        exclude,
-        use: plugin.extract({
-          use,
-          fallback: 'style-loader',
-        }),
+        include: resolve('src'),
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
       }],
     },
     plugins: [plugin],
   };
 };
 
-module.exports.loadImages = ({ include, exclude, options } = {}) => ({
+module.exports.loadImages = ({ options }) => ({
   module: {
     rules: [{
       test: /\.(jpg|png|svg)$/,
-      include,
-      exclude,
+      include: resolve('src'),
+      exclude: /node_modules/,
       use: [
         {
           loader: 'image-trace-loader',
@@ -139,16 +140,9 @@ module.exports.notify = () => ({
   ],
 });
 
-module.exports.purifyCSS = (paths) => {
-  const plugin = new PurifyCSSPlugin({ paths });
-  return {
-    plugins: [plugin],
-  };
-};
-
 module.exports.extensions = () => ({
   resolve: {
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx', '.css', '.json'],
   },
 });
 
@@ -175,6 +169,6 @@ module.exports.getAssets = () => ({
 
 module.exports.cleanDist = () => ({
   plugins: [
-    new CleanWebpackPlugin('dist'),
+    new CleanWebpackPlugin(),
   ],
 });

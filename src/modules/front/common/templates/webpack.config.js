@@ -1,6 +1,4 @@
-const glob = require('glob');
 const merge = require('webpack-merge');
-const { resolve } = require('path');
 
 const {
   setMode,
@@ -13,7 +11,6 @@ const {
   extractCSS,
   loadImages,
   notify,
-  purifyCSS,
   extensions,
   alias,
   getAssets,
@@ -26,45 +23,27 @@ const {
 module.exports = (env) => merge([
   env.dev && setMode('development'),
   env.prod && setMode('production'),
-  setEntry(resolve('src', 'index.jsx')),
-  setOutput(resolve('dist')),
   env.dev && setSourcemapMode('development'),
   env.prod && setSourcemapMode('production'),
+  setEntry(),
+  setOutput(),
   env.dev && devServer({
     host: 'localhost',
     port: 3000,
   }),
-  loadJSX({
-    include: resolve('src'),
-    exclude: /node_modules/,
-  }),
+  loadJSX(),
   {{#apollo}}
   loadGraphQl(),
   {{/apollo}}
-  env.dev && loadCSS({
-    include: resolve('src'),
-    exclude: /node_modules/,
-  }),
-  env.prod && extractCSS({
-    include: resolve('src'),
-    exclude: /node_modules/,
-    use: [
-      'css-loader',
-      'postcss-loader',
-    ],
-  }),
+  env.dev && loadCSS(),
+  env.prod && extractCSS(),
   loadImages({
-    include: resolve('src'),
-    exclude: /node_modules/,
     options: {
       limit: 25000,
       name: '[name].[hash].[ext]',
     },
   }),
   notify(),
-  purifyCSS(glob.sync(resolve('src', '**', '*'), {
-    nodir: true,
-  })),
   extensions(),
   alias(),
   getAssets(),

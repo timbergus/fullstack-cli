@@ -30,7 +30,7 @@ const resolvers = {
 };
 
 export default new ApolloClient({
-  uri: 'https://localhost:1337',
+  uri: 'https://localhost:3500',
   clientState: {
     resolvers,
     defaults,

@@ -1,6 +1,6 @@
-const { readFileSync, writeFileSync, copySync } = require('fs-extra');
-const { mkdirp } = require('mkdirp');
+const mkdirp = require('mkdirp');
 const Mustache = require('mustache');
+const { readFileSync, writeFileSync, copySync } = require('fs-extra');
 const { resolve, dirname } = require('path');
 const { fixHiddenFiles } = require('./file.tools');
 

@@ -1,5 +1,5 @@
-const { mkdirSync } = require('fs');
 const inquirer = require('inquirer');
+const { mkdirSync } = require('fs');
 const { execSync } = require('child_process');
 
 const { log } = require('../tools/message.tools');
@@ -25,6 +25,9 @@ module.exports.actionHandler = (type) => new Promise((resolve, reject) => {
 
       if (opt['state-manager']) {
         opt[options['state-manager']] = true;
+      } else {
+        opt.redux = false;
+        opt.apollo = false;
       }
 
       if ('ddbb' in opt) {
@@ -62,11 +65,13 @@ module.exports.actionHandler = (type) => new Promise((resolve, reject) => {
 
       /* eslint-disable-next-line global-require, import/no-dynamic-require */
       require(`../modules/${type}/config.json`).forEach((file) => {
-        // A project file will be copied under three circumstances:
-        //
-        // * There is no dependency.
-        // * The dependency is an option from the form.
-        // * The dependency negated (^) is not an option.
+        /**
+         * A project file will be copied under three circumstances:
+         *
+         * * There is no dependency.
+         * * The dependency is an option from the form.
+         * * The dependency negated (^) is not an option.
+         */
 
         const hasDependency = file.dependencies.map((dep) => {
           if (dep.includes('^')) {
@@ -89,7 +94,7 @@ module.exports.actionHandler = (type) => new Promise((resolve, reject) => {
       try {
         execSync(`cd ./${opt.name} && git init`, { stdio: [process.stderr] });
       } catch (error) {
-        reject(new Error('Cannot create git repository!'));
+        reject(new Error(error.message));
       }
 
       // And then we install the dependencies.
@@ -100,7 +105,7 @@ module.exports.actionHandler = (type) => new Promise((resolve, reject) => {
       try {
         execSync(`cd ./${opt.name} && npm install`, { stdio: [process.stderr] });
       } catch (error) {
-        reject(new Error('Cannot install dependencies!'));
+        reject(new Error(error.message));
       }
 
       // Finally we send upstream the result of the process.
@@ -109,10 +114,10 @@ module.exports.actionHandler = (type) => new Promise((resolve, reject) => {
         `Project "${opt.name}" created!\n`,
         'Instructions:',
         'To start the project => npm start',
-        'To build the project => npm run build',
-        'To create the docs => npm run docs',
-        'To check the code => npm run lint',
         'To test the project => npm test',
+        'To build the project => npm run build',
+        'To work on documentation => npm run docz:dev',
+        'To create documentation => npm run docz:build',
       ]);
     })
     .catch(() => reject(new Error('Cannot create project!')));

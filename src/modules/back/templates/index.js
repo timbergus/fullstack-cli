@@ -37,8 +37,8 @@ const { validate } = require('./auth');
 // Here we define the connection parameters (host, port and cors).
 
 const server = new Hapi.Server({
-  host: '0.0.0.0',
-  port: Number(process.env.PORT) || 1337,
+  host: 'localhost',
+  port: Number(process.env.PORT) || 3500,
   routes: {
     cors: {
       origin: ['*']
@@ -74,7 +74,7 @@ const hapiSwaggerOptions = {
       email: '{{ email }}'
     }
   },
-  host: 'localhost:1337'
+  host: 'localhost:3500'
 };
 
 // Then we register the plugins and launch the server.

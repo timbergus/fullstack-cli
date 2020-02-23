@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 {{# material-ui }}
 
@@ -23,8 +23,8 @@ const mapStateToProps = (state) => {
   return {
     counter,
     content,
-  }
-}
+  };
+};
 
 const mapDispatchToProps = {
   _getContent: getContent,
@@ -49,7 +49,7 @@ class CounterComponent extends Component<Props> {
     } = this.props;
 
     return (
-      <Fragment>
+      <>
         <h1>Welcome to the counter!</h1>
         <h2>{counter}</h2>
         {{#material-ui}}
@@ -73,7 +73,7 @@ class CounterComponent extends Component<Props> {
           <button type="button" onClick={_decrementCounter}>Decrement</button>
         {{/material-ui}}
         <h3>{subtitle}</h3>
-      </Fragment>
+      </>
     );
   }
 }
