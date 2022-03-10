@@ -42,7 +42,7 @@
   "dependencies": {
     "chalk": "^5.0.0",
     "fs-extra": "^10.0.0",
-    "inquirer": "^8.2.0",
+    "inquirer": "^8.2.1",
     "mkdirp": "^1.0.4",
     "mustache": "^4.2.0",
     "react": "^17.0.2",
