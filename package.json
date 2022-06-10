@@ -68,7 +68,7 @@
     "flow-bin": "^0.168.0",
     "jest": "^27.4.5",
     "sass-lint": "^1.13.1",
-    "semantic-release": "^18.0.1",
+    "semantic-release": "^19.0.3",
     "travis-deploy-once": "^5.0.11"
   }
 }
